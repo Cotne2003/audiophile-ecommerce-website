@@ -10,9 +10,14 @@ export const StyledHeader = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     width: 90%;
     left: 5%;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+    left: 0;
+    padding: 3.7rem 2.4rem;
   }
 `;
 
@@ -20,17 +25,31 @@ export const LogoAndMenuContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 4.2rem;
+  @media (max-width: 767px) {
+    gap: 0;
+  }
 `;
 
 export const Logo = styled.img`
   width: 14.3rem;
   height: 2.5rem;
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
+
+export const MobileLogo = styled.img`
+  width: 14.3rem;
+  height: 2.5rem;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const MenuIcon = styled.img`
   width: 1.6rem;
   height: 1.5rem;
-  @media (min-width: 769px) {
+  @media (min-width: 1023px) {
     display: none;
   }
 `;
@@ -40,7 +59,7 @@ export const Navbar = styled.nav`
   align-items: center;
   justify-content: space-between;
   gap: 3.4rem;
-  @media (max-width: 768px) {
+  @media (max-width: 1023px) {
     display: none;
   }
 `;

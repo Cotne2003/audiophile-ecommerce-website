@@ -9,6 +9,7 @@ import {
   Cart,
   NavText,
   MenuIcon,
+  MobileLogo,
 } from "./headerStyles";
 import logo from "../../../public/assets//audiophile2.svg";
 import menuIcon from "../../../public/assets/menu-icon.svg";
@@ -24,6 +25,9 @@ const Header = () => {
           <Logo src={logo.src} alt="Logo" />
         </Link>
       </LogoAndMenuContainer>
+      <Link href={"/"}>
+        <MobileLogo src={logo.src} alt="Logo" />
+      </Link>
       <Navbar>
         <Link href={"/"}>
           <NavText>HOME</NavText>
