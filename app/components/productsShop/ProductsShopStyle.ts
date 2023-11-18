@@ -13,7 +13,18 @@ export const ProductShopContainer = styled.div`
   height: 20.4rem;
   text-align: center;
   padding-top: 11.6rem;
+  position: relative;
   border-radius: 8px;
+  &:hover {
+    button {
+      color: #d87d4a;
+    }
+  }
+  cursor: pointer;
+  @media (max-width: 1439px) {
+    width: 27rem;
+    padding-top: 11.6rem;
+  }
 `;
 
 export const ProductShopTitle = styled.h2`
@@ -37,4 +48,17 @@ export const ProductShopButton = styled.button`
   border: none;
   margin: 1.5rem auto;
   cursor: pointer;
+`;
+
+export const ProductShopImg = styled.img`
+  position: absolute;
+  bottom: 7rem;
+  left: 5rem;
+  width: 25rem;
+  height: 25rem;
+`;
+
+export const ProductShopImgEarphones = styled(ProductShopImg)`
+  width: 29rem;
+  left: 3rem;
 `;
