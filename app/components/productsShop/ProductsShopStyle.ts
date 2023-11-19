@@ -4,7 +4,10 @@ export const ProductsShopContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20rem 10%;
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 6.8rem;
+  }
 `;
 
 export const ProductShopContainer = styled.div`
@@ -25,6 +28,14 @@ export const ProductShopContainer = styled.div`
     width: 27rem;
     padding-top: 11.6rem;
   }
+  @media (max-width: 1023px) {
+    width: 22.3rem;
+    height: 16.5rem;
+    padding-top: 8.8rem;
+  }
+  @media (max-width: 767px) {
+    width: 100%;
+  }
 `;
 
 export const ProductShopTitle = styled.h2`
@@ -33,6 +44,9 @@ export const ProductShopTitle = styled.h2`
   font-weight: 700;
   letter-spacing: 1.286px;
   text-transform: uppercase;
+  @media (max-width: 1023px) {
+    font-size: 1.5rem;
+  }
 `;
 
 export const ProductShopButton = styled.button`
@@ -48,6 +62,7 @@ export const ProductShopButton = styled.button`
   border: none;
   margin: 1.5rem auto;
   cursor: pointer;
+  transition: ease 0.3s;
 `;
 
 export const ProductShopImg = styled.img`
@@ -56,9 +71,30 @@ export const ProductShopImg = styled.img`
   left: 5rem;
   width: 25rem;
   height: 25rem;
+  @media (max-width: 1439px) {
+    left: 1rem;
+  }
+  @media (max-width: 1023px) {
+    width: 13rem;
+    height: 13rem;
+    left: 4.5rem;
+    bottom: 8rem;
+  }
+  @media (max-width: 767px) {
+    position: static;
+    margin-top: -30rem;
+  }
 `;
 
 export const ProductShopImgEarphones = styled(ProductShopImg)`
   width: 29rem;
   left: 3rem;
+  @media (max-width: 1439px) {
+    left: -1rem;
+  }
+  @media (max-width: 1023px) {
+    width: 14rem;
+    height: 12rem;
+    left: 4rem;
+  }
 `;
