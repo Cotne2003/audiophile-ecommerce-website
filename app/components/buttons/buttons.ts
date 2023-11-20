@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
-export const SeeProductButton = styled.button`
-  background: #d87d4a;
+type Props = {
+  color?: string;
+};
+
+export const SeeProductButton = styled.button<Props>`
+  background: ${(props) => (props.color === "black" ? "#000000" : "#D87D4A")};
   border: none;
   color: #fff;
   font-size: 1.3rem;
@@ -14,6 +18,6 @@ export const SeeProductButton = styled.button`
   margin-top: 4rem;
   cursor: pointer;
   &:active {
-    background: #fbaf85;
+    background: ${(props) => (props.color === "black" ? "#4C4C4C" : "#fbaf85")};
   }
 `;

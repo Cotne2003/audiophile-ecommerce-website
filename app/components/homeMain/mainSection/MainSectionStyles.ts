@@ -37,7 +37,11 @@ export const NewProduct = styled.h2`
   opacity: 0.4964;
 `;
 
-export const MainHeadphone = styled.h2`
+type Props = {
+  widthsize?: string;
+};
+
+export const MainHeadphone = styled.h2<Props>`
   color: #fff;
   font-size: 5.6rem;
   font-weight: 700;
@@ -45,6 +49,7 @@ export const MainHeadphone = styled.h2`
   letter-spacing: 2px;
   text-transform: uppercase;
   margin-top: 2.4rem;
+  width: ${(props) => (props.widthsize === "small" ? "3ch" : "")};
   @media (max-width: 767px) {
     font-size: 3.6rem;
     font-weight: 700;
@@ -53,7 +58,7 @@ export const MainHeadphone = styled.h2`
   }
 `;
 
-export const ProductText = styled.p`
+export const ProductText = styled.p<Props>`
   color: #fff;
   font-size: 1.5rem;
   font-style: normal;
@@ -61,7 +66,7 @@ export const ProductText = styled.p`
   line-height: 2.5rem;
   margin-top: 2.4rem;
   opacity: 0.75;
-  width: 40ch;
+  width: ${(props) => (props.widthsize === "small" ? "35ch" : "40ch")};
   @media (max-width: 767px) {
     width: auto;
   }
