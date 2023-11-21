@@ -20,4 +20,7 @@ export const SeeProductButton = styled.button<Props>`
   &:active {
     background: ${(props) => (props.color === "black" ? "#4C4C4C" : "#fbaf85")};
   }
+  @media (max-width: 767px) {
+    margin-top: 2.8rem;
+  }
 `;
