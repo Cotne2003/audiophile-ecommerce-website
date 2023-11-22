@@ -59,3 +59,9 @@ export const ZX9img = styled.img`
     margin-top: 5.5rem;
   }
 `;
+
+// SECOND DIV //////////////////////////////////////////////
+
+export const ProductAndPhotoSecondDivContainer = styled.div``;
+
+export const ProductAndPhotoSecondDiv = styled.div``;

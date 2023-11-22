@@ -4,6 +4,8 @@ import {
   ProductAndPhotoFirstDiv,
   ZX9img,
   ProductAndPhotoFirstDivSeconst,
+  ProductAndPhotoSecondDivContainer,
+  ProductAndPhotoSecondDiv,
 } from "./ProductsAndPhotosStyles";
 import ZX9 from "../../../../../public/assets/home/desktop/image-speaker-zx9.png";
 import {
