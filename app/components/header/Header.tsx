@@ -11,7 +11,7 @@ import {
   MenuIcon,
   MobileLogo,
 } from "./headerStyles";
-import logo from "../../../public/assets//audiophile2.svg";
+import logo from "../../../public/assets/audiophile2.svg";
 import menuIcon from "../../../public/assets/menu-icon.svg";
 import cart from "../../../public/assets/cart/combined-shape.svg";
 import Link from "next/link";

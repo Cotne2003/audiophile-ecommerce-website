@@ -5,8 +5,8 @@ export const MainStyledSection = styled.section`
   height: 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  background-image: url("/assets/home/desktop/image-hero.jpg");
   background-position: center;
+  background-image: url("/assets/home/desktop/image-hero.jpg");
   @media (max-width: 1023px) {
     background-image: url("/assets/home/tablet/image-header.jpg");
     text-align: center;
