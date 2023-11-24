@@ -9,13 +9,13 @@ import {
   ProductAndPhotoThirdDivContainerFirstDiv,
   ProductAndPhotoThirdDivContainerSecondDiv,
 } from "./ProductsAndPhotosStyles";
-import ZX9 from "../../../../../public/assets/home/desktop/image-speaker-zx9.png";
+import ZX9 from "./../../../../public/assets/home/desktop/image-speaker-zx9.png";
 import {
   MainHeadphone,
   ProductText,
 } from "../../mainSection/MainSectionStyles";
-import { SeeProductButton } from "@/app/components/buttons/buttons";
-import { SecondTitle } from "@/app/components/texts/Titles";
+import { SeeProductButton } from "@/components/buttons/buttons";
+import { SecondTitle } from "@/components/texts/Titles";
 
 const ProductsAndPhotos = () => {
   return (

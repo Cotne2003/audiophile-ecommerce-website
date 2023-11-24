@@ -1,0 +1,50 @@
+.FooterContainer {
+  background-color: black;
+  padding: 7.5rem 10% 4.8rem 10%;
+}
+
+.NavbarContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.Navbar {
+  display: flex;
+  gap: 3.4rem;
+}
+
+.TextAndLogos {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3.6rem;
+}
+
+.Text {
+  color: #fff;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  opacity: 0.5;
+  width: 54rem;
+}
+
+.icons {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.6rem;
+}
+
+.icon {
+  cursor: pointer;
+  position: relative;
+}
+
+.copy {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 25px;
+  margin-top: 5.6rem;
+}

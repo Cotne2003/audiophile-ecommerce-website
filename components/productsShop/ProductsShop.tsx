@@ -7,10 +7,10 @@ import {
   ProductShopImg,
   ProductShopImgEarphones,
 } from "./ProductsShopStyle";
-import vector from "../../../public/assets/shared/desktop/icon-arrow-right.svg";
-import headphonesPreview from "../../../public/assets/shared/desktop/image-category-thumbnail-headphones.png";
-import speakersPreview from "../../../public/assets/shared/desktop/image-category-thumbnail-speakers.png";
-import earPhonesPreview from "../../../public/assets/shared/desktop/image-category-thumbnail-earphones.png";
+import vector from "./../../public/assets/shared/desktop/icon-arrow-right.svg";
+import headphonesPreview from "./../../public/assets/shared/desktop/image-category-thumbnail-headphones.png";
+import speakersPreview from "./../../public/assets/shared/desktop/image-category-thumbnail-speakers.png";
+import earPhonesPreview from "./../../public/assets/shared/desktop/image-category-thumbnail-earphones.png";
 
 const ProductsShop = () => {
   return (
