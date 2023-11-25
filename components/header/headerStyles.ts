@@ -30,11 +30,16 @@ export const LogoAndMenuContainer = styled.div`
   }
 `;
 
-export const Logo = styled.img`
+type Props = {
+  display?: string;
+};
+
+export const Logo = styled.img<Props>`
   width: 14.3rem;
   height: 2.5rem;
   @media (max-width: 767px) {
-    display: none;
+    display: ${(props) => (props.display === "footer" ? "block" : "none")};
+    margin: ${(props) => (props.display === "footer" ? "0 auto" : "none")};
   }
 `;
 

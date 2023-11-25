@@ -1,6 +1,7 @@
 .FooterContainer {
   background-color: black;
-  padding: 7.5rem 10% 4.8rem 10%;
+  padding: 7.5rem 10% 4.8rem;
+  position: relative;
 }
 
 .NavbarContainer {
@@ -14,7 +15,7 @@
   gap: 3.4rem;
 }
 
-.TextAndLogos {
+.TextAndIcons {
   display: flex;
   justify-content: space-between;
   margin-top: 3.6rem;
@@ -47,4 +48,66 @@
   font-weight: 700;
   line-height: 25px;
   margin-top: 5.6rem;
+  opacity: 0.5;
+}
+
+.orangeBorder {
+  height: 4px;
+  width: 10.1rem;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  background: #d87d4a;
+}
+
+@media (max-width: 1023px) {
+  .FooterContainer {
+    padding: 5.6rem 5% 4.6rem;
+  }
+
+  .NavbarContainer {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
+
+  .TextAndIcons {
+    margin-top: 3.2rem;
+  }
+
+  .Text {
+    width: 100%;
+  }
+
+  .icons {
+    position: absolute;
+    bottom: 4.6rem;
+    right: 5%;
+  }
+
+  .copy {
+    margin-top: 8rem;
+  }
+
+  .orangeBorder {
+    left: 5%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .FooterContainer {
+    text-align: center;
+  }
+
+  .Navbar {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  .NavbarContainer {
+    gap: 4.8rem;
+  }
+
+  .TextAndIcons {
+    margin-top: 4.8rem;
+  }
 }

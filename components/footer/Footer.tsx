@@ -14,7 +14,7 @@ const Footer = () => {
     <div className={styles.FooterContainer}>
       <div className={styles.NavbarContainer}>
         <Link href={"/"}>
-          <Logo src={logo.src} alt="logo" />
+          <Logo display={"footer"} src={logo.src} alt="logo" />
         </Link>
 
         <div className={styles.Navbar}>
@@ -32,7 +32,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
-      <div className={styles.TextAndLogos}>
+      <div className={styles.TextAndIcons}>
         <p className={styles.Text}>
           Audiophile is an all in one stop to fulfill your audio needs. We're a
           small team of music lovers and sound specialists who are devoted to
@@ -45,7 +45,8 @@ const Footer = () => {
           <img src={INSTicon.src} alt="INSTicon" className={styles.icon} />
         </div>
       </div>
-      <p className={styles.copyRight}>Copyright 2021. All Rights Reserved</p>
+      <p className={styles.copy}>Copyright 2021. All Rights Reserved</p>
+      <div className={styles.orangeBorder}></div>
     </div>
   );
 };
