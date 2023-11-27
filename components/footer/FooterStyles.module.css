@@ -1,5 +1,5 @@
 .FooterContainer {
-  background-color: black;
+  background: #101010;
   padding: 7.5rem 10% 4.8rem;
   position: relative;
 }
@@ -40,6 +40,12 @@
 .icon {
   cursor: pointer;
   position: relative;
+  transition: ease 0.1s;
+}
+
+.icon:hover {
+  filter: brightness(0) saturate(100%) invert(45%) sepia(83%) saturate(384%)
+    hue-rotate(338deg) brightness(105%) contrast(84%);
 }
 
 .copy {
@@ -58,6 +64,10 @@
   top: 0;
   left: 10%;
   background: #d87d4a;
+}
+
+.mobileIcons {
+  display: none;
 }
 
 @media (max-width: 1023px) {
@@ -93,7 +103,7 @@
   }
 }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .FooterContainer {
     text-align: center;
   }
@@ -109,5 +119,31 @@
 
   .TextAndIcons {
     margin-top: 4.8rem;
+  }
+
+  .mobileIcons {
+    display: block;
+    display: flex;
+    gap: 1.6rem;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .orangeBorder {
+    position: static;
+    margin: -5.6rem auto 0;
+  }
+
+  .NavbarContainer {
+    margin-top: 5.6rem;
+  }
+
+  .copyAndMobileIcons {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    align-items: center;
   }
 }

@@ -12,6 +12,7 @@ import INSTicon from "/public/assets/shared/desktop/icon-instagram.svg";
 const Footer = () => {
   return (
     <div className={styles.FooterContainer}>
+      <div className={styles.orangeBorder}></div>
       <div className={styles.NavbarContainer}>
         <Link href={"/"}>
           <Logo display={"footer"} src={logo.src} alt="logo" />
@@ -32,6 +33,7 @@ const Footer = () => {
           </Link>
         </div>
       </div>
+
       <div className={styles.TextAndIcons}>
         <p className={styles.Text}>
           Audiophile is an all in one stop to fulfill your audio needs. We're a
@@ -45,8 +47,14 @@ const Footer = () => {
           <img src={INSTicon.src} alt="INSTicon" className={styles.icon} />
         </div>
       </div>
-      <p className={styles.copy}>Copyright 2021. All Rights Reserved</p>
-      <div className={styles.orangeBorder}></div>
+      <div className={styles.copyAndMobileIcons}>
+        <p className={styles.copy}>Copyright 2021. All Rights Reserved</p>
+        <div className={styles.mobileIcons}>
+          <img src={FBicon.src} alt="FBicon" className={styles.icon} />
+          <img src={TWicon.src} alt="TWicon" className={styles.icon} />
+          <img src={INSTicon.src} alt="INSTicon" className={styles.icon} />
+        </div>
+      </div>
     </div>
   );
 };
