@@ -1,13 +1,18 @@
 import React from "react";
 import { SecondStyledSection } from "./SecondSectionStyle";
-import ProductsShop from "../../productsShop/ProductsShop";
 import ProductsAndPhotos from "./productsAndPhotos/ProductsAndPhotos";
 import BestGear from "../../best audio gear/BestGear";
+
+import dynamic from "next/dynamic";
+
+const DynamicLink = dynamic(() => import("../../productsShop/ProductsShop"), {
+  ssr: false,
+});
 
 const SecondSection = () => {
   return (
     <SecondStyledSection>
-      <ProductsShop />
+      <DynamicLink />
       <ProductsAndPhotos />
       <BestGear />
     </SecondStyledSection>

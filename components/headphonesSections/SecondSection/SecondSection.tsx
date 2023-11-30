@@ -13,8 +13,16 @@ import XX99II from "../../../public/assets/product-xx99-mark-two-headphones/desk
 import XX99I from "../../../public/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg";
 import XX59 from "../../../public/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg";
 import { SeeProductButton } from "@/components/buttons/buttons";
-import ProductsShop from "@/components/productsShop/ProductsShop";
 import BestGear from "@/components/best audio gear/BestGear";
+
+import dynamic from "next/dynamic";
+
+const DynamicLink = dynamic(
+  () => import("@/components/productsShop/ProductsShop"),
+  {
+    ssr: false,
+  }
+);
 
 const SecondSection = () => {
   return (
@@ -60,7 +68,7 @@ const SecondSection = () => {
       </ShopContainer>
 
       <ProductsShopContainer>
-        <ProductsShop />
+        <DynamicLink />
       </ProductsShopContainer>
 
       <BestGear />
