@@ -1,3 +1,5 @@
+"use client";
+
 import {
   ShopContainer,
   ShopImg,
@@ -13,16 +15,8 @@ import {
 } from "@/components/headphonesSections/SecondSection/SecondSectionStyles";
 import React from "react";
 import YX1 from "@/public/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg";
+import ProductsShop from "@/components/productsShop/ProductsShop";
 import BestGear from "@/components/best audio gear/BestGear";
-
-import dynamic from "next/dynamic";
-
-const DynamicLink = dynamic(
-  () => import("@/components/productsShop/ProductsShop"),
-  {
-    ssr: false,
-  }
-);
 
 const SecondSection = () => {
   return (
@@ -42,7 +36,7 @@ const SecondSection = () => {
         </ShopDiv>
       </ShopContainer>
       <ProductsShopContainer>
-        <DynamicLink />
+        <ProductsShop />
       </ProductsShopContainer>
       <BestGear />
     </StyledSection>

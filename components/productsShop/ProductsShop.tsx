@@ -1,3 +1,5 @@
+"use clients";
+
 import React from "react";
 import {
   ProductsShopContainer,
@@ -16,33 +18,33 @@ import Link from "next/link";
 const ProductsShop = () => {
   return (
     <ProductsShopContainer>
-      <Link href={"/headphones"}>
-        <ProductShopContainer>
+      <ProductShopContainer>
+        <Link href={"/headphones"}>
           <ProductShopImg src={headphonesPreview.src} />
           <ProductShopTitle>HEADPHONES</ProductShopTitle>
           <ProductShopButton>
             Shop <img src={vector.src} />
           </ProductShopButton>
-        </ProductShopContainer>
-      </Link>
-      <Link href={"/speakers"}>
-        <ProductShopContainer>
+        </Link>
+      </ProductShopContainer>
+      <ProductShopContainer>
+        <Link href={"/speakers"}>
           <ProductShopImg src={speakersPreview.src} />
           <ProductShopTitle>SPEAKERS</ProductShopTitle>
           <ProductShopButton>
             Shop <img src={vector.src} />
           </ProductShopButton>
-        </ProductShopContainer>
-      </Link>
-      <Link href={"/earphones"}>
-        <ProductShopContainer>
+        </Link>
+      </ProductShopContainer>
+      <ProductShopContainer>
+        <Link href={"/earphones"}>
           <ProductShopImgEarphones src={earPhonesPreview.src} />
           <ProductShopTitle>EARPHONES</ProductShopTitle>
           <ProductShopButton>
             Shop <img src={vector.src} />
           </ProductShopButton>
-        </ProductShopContainer>
-      </Link>
+        </Link>
+      </ProductShopContainer>
     </ProductsShopContainer>
   );
 };

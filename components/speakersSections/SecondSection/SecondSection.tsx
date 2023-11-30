@@ -14,16 +14,8 @@ import {
 import React from "react";
 import ZX9 from "@/public/assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
 import ZX7 from "@/public/assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
+import ProductsShop from "@/components/productsShop/ProductsShop";
 import BestGear from "@/components/best audio gear/BestGear";
-
-import dynamic from "next/dynamic";
-
-const DynamicLink = dynamic(
-  () => import("@/components/productsShop/ProductsShop"),
-  {
-    ssr: false,
-  }
-);
 
 const SecondSection = () => {
   return (
@@ -58,7 +50,7 @@ const SecondSection = () => {
       </ShopContainer>
 
       <ProductsShopContainer>
-        <DynamicLink />
+        <ProductsShop />
       </ProductsShopContainer>
 
       <BestGear />
