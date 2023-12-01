@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import {
   StyledHeader,
   Logo,
@@ -15,12 +15,18 @@ import logo from "./../../public/assets/audiophile2.svg";
 import menuIcon from "./../../public/assets/menu-icon.svg";
 import cart from "./../../public/assets/cart/combined-shape.svg";
 import Link from "next/link";
+import MobileMenu from "./mobileMenu/MobileMenu";
 
 const Header = () => {
+  const [menu, setMenu] = useState(false);
+  const menuHandler = () => {
+    setMenu(!menu);
+  };
+
   return (
     <StyledHeader>
       <LogoAndMenuContainer>
-        <MenuIcon src={menuIcon.src} />
+        <MenuIcon src={menuIcon.src} onClick={menuHandler} />
         <Link href={"/"}>
           <Logo src={logo.src} alt="Logo" />
         </Link>
@@ -43,6 +49,7 @@ const Header = () => {
         </Link>
       </Navbar>
       <Cart src={cart.src} />
+      {menu && <MobileMenu menu={menu} setMenu={setMenu} />}
     </StyledHeader>
   );
 };
