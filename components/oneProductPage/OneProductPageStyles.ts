@@ -1,5 +1,13 @@
 import styled from "styled-components";
 
+export const HeaderColor = styled.div`
+  background-color: black;
+  height: 9.7rem;
+  @media (max-width: 1023px) {
+    height: 9rem;
+  }
+`;
+
 export const StyledMain = styled.main`
   padding: 7.9rem 10% 16rem;
   @media (max-width: 1023px) {

@@ -1,14 +1,17 @@
 import React from "react";
 import SectionOne from "./sectionOne/SectionOne";
 import SectionTwo from "./sectionTwo/SectionTwo";
-import { StyledMain } from "./OneProductPageStyles";
+import { HeaderColor, StyledMain } from "./OneProductPageStyles";
 
 const OneProductPage = () => {
   return (
-    <StyledMain>
-      <SectionOne />
-      <SectionTwo />
-    </StyledMain>
+    <>
+      <HeaderColor></HeaderColor>
+      <StyledMain>
+        <SectionOne />
+        <SectionTwo />
+      </StyledMain>
+    </>
   );
 };
 
