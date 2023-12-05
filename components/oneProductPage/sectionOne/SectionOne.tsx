@@ -6,6 +6,8 @@ import {
   GoBack,
   ProductCounter,
   ProductImg,
+  ProductImgMobile,
+  ProductImgTablet,
   ProductPrice,
   ProductText,
   ProductTitle,
@@ -14,6 +16,8 @@ import {
   ToCartDiv,
 } from "./SectionOneStyles";
 import XX99markII from "@/public/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg";
+import XX99markIItablet from "@/public/assets/product-xx99-mark-two-headphones/tablet/image-product.jpg";
+import XX99markIImobile from "@/public/assets/product-xx99-mark-two-headphones/mobile/image-product.jpg";
 import plus from "@/public/assets/plus.svg";
 import minus from "@/public/assets/minus.svg";
 
@@ -23,6 +27,8 @@ const SectionOne = () => {
       <GoBack>Go Back</GoBack>
       <ShopingAreaContainer>
         <ProductImg src={XX99markII.src}></ProductImg>
+        <ProductImgTablet src={XX99markIItablet.src}></ProductImgTablet>
+        <ProductImgMobile src={XX99markIImobile.src}></ProductImgMobile>
         <ShopingAreaDiv>
           <ProductTitle>XX99 Mark II Headphones</ProductTitle>
           <ProductText>

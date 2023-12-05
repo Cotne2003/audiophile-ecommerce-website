@@ -14,16 +14,50 @@ export const ShopingAreaContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 5.6rem;
+  @media (max-width: 1439px) {
+    margin: 2.4rem;
+  }
+  @media (max-width: 767px) {
+    flex-direction: column;
+    gap: 3.2rem;
+  }
 `;
 
 export const ProductImg = styled.img`
   width: 54rem;
   height: 56rem;
   border-radius: 8px;
+  @media (max-width: 1439px) {
+    display: none;
+  }
+`;
+
+export const ProductImgTablet = styled.img`
+  width: 28.1rem;
+  height: 48rem;
+  border-radius: 8px;
+  @media (min-width: 1440px) {
+    display: none;
+  }
+  @media (max-width: 767px) {
+    display: none;
+  }
+`;
+
+export const ProductImgMobile = styled.img`
+  width: 32.7rem;
+  height: 32.7rem;
+  border-radius: 8px;
+  @media (min-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ShopingAreaDiv = styled.div`
   width: 44.5rem;
+  @media (max-width: 1439px) {
+    width: 33.9rem;
+  }
 `;
 
 export const ProductTitle = styled.h2`
@@ -33,6 +67,14 @@ export const ProductTitle = styled.h2`
   line-height: 44px;
   letter-spacing: 1.429px;
   text-transform: uppercase;
+  @media (max-width: 1439px) {
+    font-size: 2.8rem;
+    line-height: 32px;
+    letter-spacing: 1px;
+  }
+  @media (min-width: 768px) {
+    line-height: normal;
+  }
 `;
 
 export const ProductText = styled.p`
@@ -42,6 +84,9 @@ export const ProductText = styled.p`
   line-height: 25px;
   opacity: 0.5;
   margin-top: 3.2rem;
+  @media (min-width: 768px) {
+    margin-top: 2.4rem;
+  }
 `;
 
 export const ProductPrice = styled.p`
@@ -51,6 +96,9 @@ export const ProductPrice = styled.p`
   letter-spacing: 1.286px;
   text-transform: uppercase;
   margin-top: 3.2rem;
+  @media (min-width: 768px) {
+    margin-top: 2.4rem;
+  }
 `;
 
 export const ToCartDiv = styled.div`
@@ -58,6 +106,9 @@ export const ToCartDiv = styled.div`
   gap: 1.6rem;
   align-items: center;
   margin-top: 4.7rem;
+  @media (max-width: 1439px) {
+    margin-top: 3.1rem;
+  }
 `;
 
 export const ProductCounter = styled.div`
