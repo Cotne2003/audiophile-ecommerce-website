@@ -15,28 +15,23 @@ import {
   ShopingAreaDiv,
   ToCartDiv,
 } from "./SectionOneStyles";
-import XX99markII from "@/public/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg";
-import XX99markIItablet from "@/public/assets/product-xx99-mark-two-headphones/tablet/image-product.jpg";
-import XX99markIImobile from "@/public/assets/product-xx99-mark-two-headphones/mobile/image-product.jpg";
 import plus from "@/public/assets/plus.svg";
 import minus from "@/public/assets/minus.svg";
+import { DATA } from "@/DATA";
 
 const SectionOne = () => {
+  const zx7 = DATA[4];
   return (
     <section>
       <GoBack>Go Back</GoBack>
       <ShopingAreaContainer>
-        <ProductImg src={XX99markII.src}></ProductImg>
-        <ProductImgTablet src={XX99markIItablet.src}></ProductImgTablet>
-        <ProductImgMobile src={XX99markIImobile.src}></ProductImgMobile>
+        <ProductImg src={zx7.mainImgDesktopUrl} />
+        <ProductImgTablet src={zx7.mainImgTabletUrl} />
+        <ProductImgMobile src={zx7.mainImgMobileUrl} />
         <ShopingAreaDiv>
-          <ProductTitle>XX99 Mark II Headphones</ProductTitle>
-          <ProductText>
-            The new XX99 Mark II headphones is the pinnacle of pristine audio.
-            It redefines your premium headphone experience by reproducing the
-            balanced depth and precision of studio-quality sound.
-          </ProductText>
-          <ProductPrice>$ 2,999</ProductPrice>
+          <ProductTitle>{zx7.title}</ProductTitle>
+          <ProductText>{zx7.mainText}</ProductText>
+          <ProductPrice>{"$ " + zx7.price}</ProductPrice>
           <ToCartDiv>
             <ProductCounter>
               <CounterIconDiv>
