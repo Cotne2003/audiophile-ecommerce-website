@@ -9,6 +9,7 @@ import {
   MainStyledSection,
 } from "./MainSectionStyles";
 import { SeeProductButton } from "../../buttons/buttons";
+import Link from "next/link";
 
 const MainSection = () => {
   return (
@@ -20,7 +21,9 @@ const MainSection = () => {
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.
         </ProductText>
-        <SeeProductButton>See Product</SeeProductButton>
+        <Link href={"/headphones/XX99-Mark-II"}>
+          <SeeProductButton>See Product</SeeProductButton>
+        </Link>
       </DivProduct>
     </MainStyledSection>
   );

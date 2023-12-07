@@ -1,5 +1,6 @@
 export const DATA = [
   {
+    link: "/headphones/XX99-Mark-II",
     mainImgDesktopUrl:
       "/assets/product-xx99-mark-two-headphones/desktop/image-product.jpg",
     mainImgTabletUrl:
@@ -45,12 +46,19 @@ export const DATA = [
     alsoLikeImgUrl1:
       "/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg",
     alsoLikeImgUrl2:
-      "/assets/product-zx7-speaker/desktop/image-category-page-preview.jpg",
+      "/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg",
     alsoLikeImgUrl3:
       "/assets/product-zx9-speaker/desktop/image-category-page-preview.jpg",
+    alsoLikeTitle1: "XX99 MARK I",
+    alsoLikeTitle2: "XX59",
+    alsoLikeTitle3: "ZX9 SPEAKER",
+    alsoLikeLink1: "/headphones/XX99-Mark-I",
+    alsoLikeLink2: "/headphones/XX59",
+    alsoLikeLink3: "/speakers/ZX9",
   },
 
   {
+    link: "/headphones/XX99-Mark-I",
     mainImgDesktopUrl:
       "/assets/product-xx99-mark-one-headphones/desktop/image-product.jpg",
     mainImgTabletUrl:
@@ -99,9 +107,16 @@ export const DATA = [
       "/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg",
     alsoLikeImgUrl3:
       "/assets/product-zx9-speaker/desktop/image-category-page-preview.jpg",
+    alsoLikeTitle1: "XX99 MARK II",
+    alsoLikeTitle2: "XX59",
+    alsoLikeTitle3: "ZX9 SPEAKER",
+    alsoLikeLink1: "/headphones/XX99-Mark-II",
+    alsoLikeLink2: "/headphones/XX59",
+    alsoLikeLink3: "/speakers/ZX9",
   },
 
   {
+    link: "/headphones/XX59",
     mainImgDesktopUrl:
       "/assets/product-xx59-headphones/desktop/image-product.jpg",
     mainImgTabletUrl:
@@ -150,9 +165,16 @@ export const DATA = [
       "/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg",
     alsoLikeImgUrl3:
       "/assets/product-zx9-speaker/desktop/image-category-page-preview.jpg",
+    alsoLikeTitle1: "XX99 MARK II",
+    alsoLikeTitle2: "XX99 MARK I",
+    alsoLikeTitle3: "ZX9 SPEAKER",
+    alsoLikeLink1: "/headphones/XX99-Mark-II",
+    alsoLikeLink2: "/headphones/XX99-Mark-I",
+    alsoLikeLink3: "/speakers/ZX9",
   },
 
   {
+    link: "/speakers/ZX9",
     mainImgDesktopUrl: "/assets/product-zx9-speaker/desktop/image-product.jpg",
     mainImgTabletUrl: "/assets/product-zx9-speaker/tablet/image-product.jpg",
     mainImgMobileUrl: "/assets/product-zx9-speaker/mobile/image-product.jpg",
@@ -198,9 +220,16 @@ export const DATA = [
       "/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg",
     alsoLikeImgUrl3:
       "/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg",
+    alsoLikeTitle1: "ZX7 SPEAKER",
+    alsoLikeTitle2: "XX99 MARK I",
+    alsoLikeTitle3: "XX59",
+    alsoLikeLink1: "/speakers/ZX7",
+    alsoLikeLink2: "/headphones/XX99-Mark-I",
+    alsoLikeLink3: "/headphones/XX59",
   },
 
   {
+    link: "/speakers/ZX7",
     mainImgDesktopUrl: "/assets/product-zx7-speaker/desktop/image-product.jpg",
     mainImgTabletUrl: "/assets/product-zx7-speaker/tablet/image-product.jpg",
     mainImgMobileUrl: "/assets/product-zx7-speaker/mobile/image-product.jpg",
@@ -246,9 +275,16 @@ export const DATA = [
       "/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg",
     alsoLikeImgUrl3:
       "/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg",
+    alsoLikeTitle1: "ZX9 SPEAKER",
+    alsoLikeTitle2: "XX99 MARK I",
+    alsoLikeTitle3: "XX59",
+    alsoLikeLink1: "/speakers/ZX9",
+    alsoLikeLink2: "/headphones/XX99-Mark-I",
+    alsoLikeLink3: "/headphones/XX59",
   },
 
   {
+    link: "/earphones/YX1",
     mainImgDesktopUrl:
       "/assets/product-yx1-earphones/desktop/image-product.jpg",
     mainImgTabletUrl: "/assets/product-yx1-earphones/tablet/image-product.jpg",
@@ -295,5 +331,51 @@ export const DATA = [
       "/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg",
     alsoLikeImgUrl3:
       "/assets/product-zx9-speaker/desktop/image-category-page-preview.jpg",
+    alsoLikeTitle1: "XX99 MARK I",
+    alsoLikeTitle2: "XX59",
+    alsoLikeTitle3: "ZX9 SPEAKER",
+    alsoLikeLink1: "/headphones/XX99-Mark-I",
+    alsoLikeLink2: "/headphones/XX59",
+    alsoLikeLink3: "/speakers/ZX9",
   },
 ];
+
+export type ProductType = {
+  link: string;
+  mainImgDesktopUrl: string;
+  mainImgTabletUrl: string;
+  mainImgMobileUrl: string;
+  title: string;
+  mainText: string;
+  price: string;
+  firstFeature: string;
+  secondFeature: string;
+  unitRating: string;
+  unit: string;
+  earcupsRating: string;
+  earcups: string;
+  userManualRating: string;
+  userManual: string;
+  cableRating: string;
+  cable: string;
+  travelOrCableRating: string;
+  travelOrCable: string;
+  imgGallery1DesktopUrl: string;
+  imgGallery1TabletUrl: string;
+  imgGallery1MobileUrl: string;
+  imgGallery2DesktopUrl: string;
+  imgGallery2TabletUrl: string;
+  imgGallery2MobileUrl: string;
+  imgGallery3DesktopUrl: string;
+  imgGallery3TabletUrl: string;
+  imgGallery3MobileUrl: string;
+  alsoLikeImgUrl1: string;
+  alsoLikeImgUrl2: string;
+  alsoLikeImgUrl3: string;
+  alsoLikeTitle1: string;
+  alsoLikeTitle2: string;
+  alsoLikeTitle3: string;
+  alsoLikeLink1: string;
+  alsoLikeLink2: string;
+  alsoLikeLink3: string;
+};

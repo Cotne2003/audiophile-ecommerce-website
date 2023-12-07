@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   AddToCart,
   Count,
@@ -17,21 +17,33 @@ import {
 } from "./SectionOneStyles";
 import plus from "@/public/assets/plus.svg";
 import minus from "@/public/assets/minus.svg";
-import { DATA } from "@/DATA";
+import { DATA, ProductType } from "@/DATA";
+import { useRouter, usePathname } from "next/navigation";
 
 const SectionOne = () => {
-  const zx7 = DATA[4];
+  const router = useRouter();
+  const pathName = usePathname();
+  const [data, setData] = useState<ProductType | null>(null);
+
+  const goBack = () => {
+    router.back();
+  };
+
+  useEffect(() => {
+    const product = DATA.filter((product) => product.link === pathName);
+    setData(product[0]);
+  }, []);
   return (
     <section>
-      <GoBack>Go Back</GoBack>
+      <GoBack onClick={goBack}>Go Back</GoBack>
       <ShopingAreaContainer>
-        <ProductImg src={zx7.mainImgDesktopUrl} />
-        <ProductImgTablet src={zx7.mainImgTabletUrl} />
-        <ProductImgMobile src={zx7.mainImgMobileUrl} />
+        <ProductImg src={data?.mainImgDesktopUrl} />
+        <ProductImgTablet src={data?.mainImgTabletUrl} />
+        <ProductImgMobile src={data?.mainImgMobileUrl} />
         <ShopingAreaDiv>
-          <ProductTitle>{zx7.title}</ProductTitle>
-          <ProductText>{zx7.mainText}</ProductText>
-          <ProductPrice>{"$ " + zx7.price}</ProductPrice>
+          <ProductTitle>{data?.title}</ProductTitle>
+          <ProductText>{data?.mainText}</ProductText>
+          <ProductPrice>{"$ " + data?.price}</ProductPrice>
           <ToCartDiv>
             <ProductCounter>
               <CounterIconDiv>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   AlsoLikeContainer,
   AlsoLikeDiv,
@@ -21,40 +21,47 @@ import { AddToCart } from "../sectionOne/SectionOneStyles";
 import XX99markI from "@/public/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg";
 import ProductsShop from "@/components/productsShop/ProductsShop";
 import BestGear from "@/components/best audio gear/BestGear";
-import { DATA } from "@/DATA";
+import { DATA, ProductType } from "@/DATA";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const SectionTwo = () => {
-  const zx7 = DATA[4];
+  const pathName = usePathname();
+  const [data, setData] = useState<ProductType | null>(null);
+  useEffect(() => {
+    const product = DATA.filter((product) => product.link === pathName);
+    setData(product[0]);
+  }, []);
   return (
     <StyledSection>
       <ContentContainer>
         <ContentFirstDiv>
           <ContentTitle>FEATURES</ContentTitle>
-          <ContentFirstText>{zx7.firstFeature}</ContentFirstText>
-          <ContentFirstText>{zx7.secondFeature}</ContentFirstText>
+          <ContentFirstText>{data?.firstFeature}</ContentFirstText>
+          <ContentFirstText>{data?.secondFeature}</ContentFirstText>
         </ContentFirstDiv>
         <ContentSecondDiv>
           <ContentTitle>in the box</ContentTitle>
           <ul>
             <li>
-              <span>{zx7.unitRating}</span>
-              {zx7.unit}
+              <span>{data?.unitRating}</span>
+              {data?.unit}
             </li>
             <li>
-              <span>{zx7.earcupsRating}</span>
-              {zx7.earcups}
+              <span>{data?.earcupsRating}</span>
+              {data?.earcups}
             </li>
             <li>
-              <span>{zx7.userManualRating}</span>
-              {zx7.userManual}
+              <span>{data?.userManualRating}</span>
+              {data?.userManual}
             </li>
             <li>
-              <span>{zx7.cableRating}</span>
-              {zx7.cable}
+              <span>{data?.cableRating}</span>
+              {data?.cable}
             </li>
             <li>
-              <span>{zx7.travelOrCableRating}</span>
-              {zx7.travelOrCable}
+              <span>{data?.travelOrCableRating}</span>
+              {data?.travelOrCable}
             </li>
           </ul>
         </ContentSecondDiv>
@@ -62,35 +69,41 @@ const SectionTwo = () => {
 
       <ProductImgContainer>
         <div>
-          <ProductImgDesktop src={zx7.imgGallery1DesktopUrl} alt="" />
-          <ProductImgDesktop src={zx7.imgGallery2DesktopUrl} alt="" />
-          <ProductImgTablet src={zx7.imgGallery1TabletUrl} alt="" />
-          <ProductImgTablet src={zx7.imgGallery2TabletUrl} alt="" />
-          <ProductImgMobile src={zx7.imgGallery1MobileUrl} alt="" />
-          <ProductImgMobile src={zx7.imgGallery2MobileUrl} alt="" />
+          <ProductImgDesktop src={data?.imgGallery1DesktopUrl} alt="" />
+          <ProductImgDesktop src={data?.imgGallery2DesktopUrl} alt="" />
+          <ProductImgTablet src={data?.imgGallery1TabletUrl} alt="" />
+          <ProductImgTablet src={data?.imgGallery2TabletUrl} alt="" />
+          <ProductImgMobile src={data?.imgGallery1MobileUrl} alt="" />
+          <ProductImgMobile src={data?.imgGallery2MobileUrl} alt="" />
         </div>
-        <SecondProductImgDesktop src={zx7.imgGallery3DesktopUrl} alt="" />
-        <SecondProductImgTablet src={zx7.imgGallery3TabletUrl} alt="" />
-        <SecondProductImgMobile src={zx7.imgGallery3MobileUrl} alt="" />
+        <SecondProductImgDesktop src={data?.imgGallery3DesktopUrl} alt="" />
+        <SecondProductImgTablet src={data?.imgGallery3TabletUrl} alt="" />
+        <SecondProductImgMobile src={data?.imgGallery3MobileUrl} alt="" />
       </ProductImgContainer>
 
       <AlsoLikeContainer>
         <ContentTitle>you may also like</ContentTitle>
         <AlsoLikeDiv>
           <div>
-            <img src={zx7.alsoLikeImgUrl1} alt="" />
-            <h2>XX99 MARK I</h2>
-            <AddToCart>See Product</AddToCart>
+            <img src={data?.alsoLikeImgUrl1} alt="" />
+            <h2>{data?.alsoLikeTitle1}</h2>
+            <Link href={data?.alsoLikeLink1 || ""}>
+              <AddToCart>See Product</AddToCart>
+            </Link>
           </div>
           <div>
-            <img src={zx7.alsoLikeImgUrl2} alt="" />
-            <h2>XX59</h2>
-            <AddToCart>See Product</AddToCart>
+            <img src={data?.alsoLikeImgUrl2} alt="" />
+            <h2>{data?.alsoLikeTitle2}</h2>
+            <Link href={data?.alsoLikeLink2 || ""}>
+              <AddToCart>See Product</AddToCart>
+            </Link>
           </div>
           <div>
-            <img src={zx7.alsoLikeImgUrl3} alt="" />
-            <h2>ZX9 SPEAKER</h2>
-            <AddToCart>See Product</AddToCart>
+            <img src={data?.alsoLikeImgUrl3} alt="" />
+            <h2>{data?.alsoLikeTitle3}</h2>
+            <Link href={data?.alsoLikeLink3 || ""}>
+              <AddToCart>See Product</AddToCart>
+            </Link>
           </div>
         </AlsoLikeDiv>
       </AlsoLikeContainer>

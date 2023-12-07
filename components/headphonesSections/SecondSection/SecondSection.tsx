@@ -17,6 +17,7 @@ import XX59 from "../../../public/assets/product-xx59-headphones/desktop/image-c
 import { SeeProductButton } from "@/components/buttons/buttons";
 import ProductsShop from "@/components/productsShop/ProductsShop";
 import BestGear from "@/components/best audio gear/BestGear";
+import Link from "next/link";
 
 const SecondSection = () => {
   return (
@@ -31,7 +32,9 @@ const SecondSection = () => {
             It redefines your premium headphone experience by reproducing the
             balanced depth and precision of studio-quality sound.
           </ShopText>
-          <SeeProductButton>See Product</SeeProductButton>
+          <Link href={"/headphones/XX99-Mark-II"}>
+            <SeeProductButton>See Product</SeeProductButton>
+          </Link>
         </ShopDiv>
       </ShopContainer>
 
@@ -43,7 +46,9 @@ const SecondSection = () => {
             detailed and accurate audio reproduction for audiophiles, mixing
             engineers, and music aficionados alike in studios and on the go.
           </ShopText>
-          <SeeProductButton>See Product</SeeProductButton>
+          <Link href={"/headphones/XX99-Mark-I"}>
+            <SeeProductButton>See Product</SeeProductButton>
+          </Link>
         </ShopDiv>
         <ShopImg src={XX99I.src} />
       </ShopContainer>
@@ -57,7 +62,9 @@ const SecondSection = () => {
             tastes with the XX59 headphones. The stylish yet durable versatile
             wireless headset is a brilliant companion at home or on the move.
           </ShopText>
-          <SeeProductButton>See Product</SeeProductButton>
+          <Link href={"/headphones/XX59"}>
+            <SeeProductButton>See Product</SeeProductButton>
+          </Link>
         </ShopDiv>
       </ShopContainer>
 

@@ -17,6 +17,7 @@ import React from "react";
 import YX1 from "@/public/assets/product-yx1-earphones/desktop/image-category-page-preview.jpg";
 import ProductsShop from "@/components/productsShop/ProductsShop";
 import BestGear from "@/components/best audio gear/BestGear";
+import Link from "next/link";
 
 const SecondSection = () => {
   return (
@@ -32,7 +33,9 @@ const SecondSection = () => {
             even in noisy environments with its active noise cancellation
             feature.
           </ShopText>
-          <SeeProductButton>see product</SeeProductButton>
+          <Link href={"/earphones/YX1"}>
+            <SeeProductButton>see product</SeeProductButton>
+          </Link>
         </ShopDiv>
       </ShopContainer>
       <ProductsShopContainer>

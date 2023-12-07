@@ -16,6 +16,7 @@ import {
 } from "../../mainSection/MainSectionStyles";
 import { SeeProductButton } from "@/components/buttons/buttons";
 import { SecondTitle } from "@/components/texts/Titles";
+import Link from "next/link";
 
 const ProductsAndPhotos = () => {
   return (
@@ -28,14 +29,18 @@ const ProductsAndPhotos = () => {
             Upgrade to premium speakers that are phenomenally built to deliver
             truly remarkable sound.
           </ProductText>
-          <SeeProductButton color="black">See Product</SeeProductButton>
+          <Link href={"/speakers/ZX9"}>
+            <SeeProductButton color="black">See Product</SeeProductButton>
+          </Link>
         </ProductAndPhotoFirstDivSecond>
       </ProductAndPhotoFirstDiv>
 
       <ProductAndPhotoSecondDivContainer>
         <div>
           <SecondTitle>ZX7 SPEAKER</SecondTitle>
-          <SeeProductButton fill="none">See Product</SeeProductButton>
+          <Link href={"/speakers/ZX7"}>
+            <SeeProductButton fill="none">See Product</SeeProductButton>
+          </Link>
         </div>
       </ProductAndPhotoSecondDivContainer>
 
@@ -43,7 +48,9 @@ const ProductsAndPhotos = () => {
         <ProductAndPhotoThirdDivContainerFirstDiv></ProductAndPhotoThirdDivContainerFirstDiv>
         <ProductAndPhotoThirdDivContainerSecondDiv>
           <SecondTitle>YX1 EARPHONES</SecondTitle>
-          <SeeProductButton fill="none">See Product</SeeProductButton>
+          <Link href={"/earphones/YX1"}>
+            <SeeProductButton fill="none">See Product</SeeProductButton>
+          </Link>
         </ProductAndPhotoThirdDivContainerSecondDiv>
       </ProductAndPhotoThirdDivContainer>
     </ProductsAndPhotosContainer>

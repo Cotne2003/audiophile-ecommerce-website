@@ -16,6 +16,7 @@ import ZX9 from "@/public/assets/product-zx9-speaker/desktop/image-category-page
 import ZX7 from "@/public/assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
 import ProductsShop from "@/components/productsShop/ProductsShop";
 import BestGear from "@/components/best audio gear/BestGear";
+import Link from "next/link";
 
 const SecondSection = () => {
   return (
@@ -31,7 +32,9 @@ const SecondSection = () => {
             -- creating new possibilities for more pleasing and practical audio
             setups.
           </ShopText>
-          <SeeProductButton>see product</SeeProductButton>
+          <Link href={"/speakers/ZX9"}>
+            <SeeProductButton>see product</SeeProductButton>
+          </Link>
         </ShopDiv>
       </ShopContainer>
 
@@ -44,7 +47,9 @@ const SecondSection = () => {
             represents the top of the line powered speakers for home or studio
             use.
           </ShopText>
-          <SeeProductButton>See Product</SeeProductButton>
+          <Link href={"/speakers/ZX7"}>
+            <SeeProductButton>See Product</SeeProductButton>
+          </Link>
         </ShopDiv>
         <ShopImg src={ZX7.src} />
       </ShopContainer>
