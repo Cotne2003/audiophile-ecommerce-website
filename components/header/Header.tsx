@@ -16,6 +16,7 @@ import menuIcon from "./../../public/assets/menu-icon.svg";
 import cart from "./../../public/assets/cart/combined-shape.svg";
 import Link from "next/link";
 import MobileMenu from "./mobileMenu/MobileMenu";
+import CartSpace from "./cartSpace/CartSpace";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -50,6 +51,7 @@ const Header = () => {
       </Navbar>
       <Cart src={cart.src} />
       {menu && <MobileMenu menu={menu} setMenu={setMenu} />}
+      <CartSpace />
     </StyledHeader>
   );
 };
