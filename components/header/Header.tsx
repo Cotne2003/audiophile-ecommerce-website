@@ -23,6 +23,10 @@ const Header = () => {
   const menuHandler = () => {
     setMenu(!menu);
   };
+  const [cartSpace, setCartSpace] = useState(false);
+  const cartSpaceHandler = () => {
+    setCartSpace(!cartSpace);
+  };
 
   return (
     <StyledHeader>
@@ -49,9 +53,11 @@ const Header = () => {
           <NavText>EARPHONES</NavText>
         </Link>
       </Navbar>
-      <Cart src={cart.src} />
+      <Cart src={cart.src} onClick={cartSpaceHandler} />
       {menu && <MobileMenu menu={menu} setMenu={setMenu} />}
-      <CartSpace />
+      {cartSpace && (
+        <CartSpace cartSpace={cartSpace} setCartSpace={setCartSpace} />
+      )}
     </StyledHeader>
   );
 };
