@@ -15,15 +15,21 @@ import test from "@/public/assets/product-xx59-headphones/desktop/image-category
 import plus from "@/public/assets/plus.svg";
 import minus from "@/public/assets/minus.svg";
 
-const CartProduct = () => {
+type Props = {
+  imgUrl: string | undefined;
+  title: string | undefined;
+  price: string | undefined;
+};
+
+const CartProduct = ({ imgUrl, title, price }: Props) => {
   return (
     <ProductsDiv>
       <ProductDiv>
         <ImgAndPrice>
-          <ProductImg src={test.src} />
+          <ProductImg src={imgUrl} />
           <TitleAndPriceDiv>
-            <ProductTitle>XX99 MK II</ProductTitle>
-            <Price>$ 2,999</Price>
+            <ProductTitle>{title}</ProductTitle>
+            <Price>$ {price}</Price>
           </TitleAndPriceDiv>
         </ImgAndPrice>
         <ProductCounter>

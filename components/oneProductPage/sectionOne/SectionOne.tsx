@@ -19,6 +19,9 @@ import plus from "@/public/assets/plus.svg";
 import minus from "@/public/assets/minus.svg";
 import { DATA, ProductType } from "@/DATA";
 import { useRouter, usePathname } from "next/navigation";
+import { Product, cartData } from "@/app/states";
+import { useRecoilState } from "recoil";
+import { v4 } from "uuid";
 
 const SectionOne = () => {
   const router = useRouter();
@@ -33,6 +36,20 @@ const SectionOne = () => {
     const product = DATA.filter((product) => product.link === pathName);
     setData(product[0]);
   }, []);
+
+  const [cart, setCart] = useRecoilState<Product[]>(cartData);
+
+  const addedProduct = () => {
+    setCart([
+      ...cart,
+      {
+        id: v4(),
+        imgUrl: data?.mainImgDesktopUrl,
+        title: data?.title,
+        price: data?.price,
+      },
+    ]);
+  };
   return (
     <section>
       <GoBack onClick={goBack}>Go Back</GoBack>
@@ -54,7 +71,7 @@ const SectionOne = () => {
                 <img src={plus.src} />
               </CounterIconDiv>
             </ProductCounter>
-            <AddToCart>ADD TO CART</AddToCart>
+            <AddToCart onClick={addedProduct}>ADD TO CART</AddToCart>
           </ToCartDiv>
         </ShopingAreaDiv>
       </ShopingAreaContainer>

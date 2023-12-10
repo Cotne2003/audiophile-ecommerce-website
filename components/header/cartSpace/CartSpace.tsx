@@ -14,6 +14,8 @@ import {
   TotalAndFullPriceDiv,
 } from "./CartSpaceStyles";
 import CartProduct from "./CartProduct/CartProduct";
+import { useRecoilState } from "recoil";
+import { cartData } from "@/app/states";
 
 type Props = {
   cartSpace: boolean;
@@ -24,15 +26,28 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
   const cartSpaceRemover = () => {
     setCartSpace(!cartSpace);
   };
+  const [cart, setCart] = useRecoilState(cartData);
+  const cartDataRemover = () => {
+    setCart([]);
+  };
   return (
     <>
       <CartContainer onClick={cartSpaceRemover}></CartContainer>
       <CartDiv>
         <TitleAndRemove>
-          <CartTitle>Cart (3)</CartTitle>
-          <Remove>Remove all</Remove>
+          <CartTitle>Cart ({cart.length})</CartTitle>
+          <Remove onClick={cartDataRemover}>Remove all</Remove>
         </TitleAndRemove>
-        <CartProduct />
+
+        {cart.map((product) => (
+          <CartProduct
+            key={product.id}
+            imgUrl={product.imgUrl}
+            title={product.title}
+            price={product.price}
+          />
+        ))}
+
         <TotalAndButtonContainer>
           <TotalAndFullPriceDiv>
             <Total>Total</Total>

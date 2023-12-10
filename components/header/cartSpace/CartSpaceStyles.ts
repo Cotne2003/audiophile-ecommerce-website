@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const CartContainer = styled.div`
   width: 100%;
-  height: 200vh;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.425);
   z-index: 100;
   left: 0;
@@ -19,6 +19,11 @@ export const CartDiv = styled.div`
   top: 15rem;
   right: 0;
   z-index: 999;
+  @media (max-width: 767px) {
+    width: 90%;
+    left: 5%;
+    right: 5%;
+  }
 `;
 
 export const TitleAndRemove = styled.div`
@@ -43,6 +48,9 @@ export const Remove = styled.p`
   text-decoration-line: underline;
   opacity: 0.5;
   cursor: pointer;
+  &:active {
+    color: #d87d4a;
+  }
 `;
 
 export const TotalAndButtonContainer = styled.div`
