@@ -19,7 +19,7 @@ import plus from "@/public/assets/plus.svg";
 import minus from "@/public/assets/minus.svg";
 import { DATA, ProductType } from "@/DATA";
 import { useRouter, usePathname } from "next/navigation";
-import { Product, cartData } from "@/app/states";
+import { Product, cartData, totalPrice } from "@/app/states";
 import { useRecoilState } from "recoil";
 import { v4 } from "uuid";
 
@@ -38,15 +38,16 @@ const SectionOne = () => {
   }, []);
 
   const [cart, setCart] = useRecoilState<Product[]>(cartData);
+  const [total, setTotal] = useRecoilState(totalPrice);
 
   const addedProduct = () => {
     setCart([
       ...cart,
       {
         id: v4(),
-        imgUrl: data?.mainImgDesktopUrl,
-        title: data?.title,
-        price: data?.price,
+        imgUrl: data?.mainImgDesktopUrl ?? "nothing",
+        title: data?.title ?? "nothing",
+        price: data?.price ?? "0",
       },
     ]);
   };
