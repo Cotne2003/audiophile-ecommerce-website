@@ -50,7 +50,9 @@ const SectionOne = () => {
         price: data?.price ?? "0",
       },
     ]);
+    const haha = cart.reduce((sum, product) => +product.price + sum, 0);
   };
+  console.log(typeof [1, 2]);
   return (
     <section>
       <GoBack onClick={goBack}>Go Back</GoBack>
