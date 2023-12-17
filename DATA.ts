@@ -10,7 +10,7 @@ export const DATA = [
     title: "XX99 Mark II Headphones",
     mainText:
       "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.",
-    price: "2,999",
+    price: "2999",
     firstFeature:
       "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat.",
     secondFeature:
@@ -68,7 +68,7 @@ export const DATA = [
     title: "XX99 Mark I Headphones",
     mainText:
       "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.",
-    price: "1,770",
+    price: "1770",
     firstFeature:
       "As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades of audio expertise, redefining the critical listening experience. This pair of closed-back headphones are made of industrial, aerospace-grade materials to emphasize durability at a relatively light weight of 11 oz.",
     secondFeature:
@@ -181,7 +181,7 @@ export const DATA = [
     title: "ZX9 Speaker",
     mainText:
       "Upgrade your sound system with the all new ZX9 active speaker. It’s a bookshelf speaker system that offers truly wireless connectivity -- creating new possibilities for more pleasing and practical audio setups.",
-    price: "4,500",
+    price: "4500",
     firstFeature:
       "Connect via Bluetooth or nearly any wired source. This speaker features optical, digital coaxial, USB Type-B, stereo RCA, and stereo XLR inputs, allowing you to have up to five wired source devices connected for easy switching. Improved bluetooth technology offers near lossless audio quality at up to 328ft (100m).",
     secondFeature:
@@ -236,7 +236,7 @@ export const DATA = [
     title: "ZX7 Speaker",
     mainText:
       "Stream high quality sound wirelessly with minimal to no loss. The ZX7 speaker uses high-end audiophile components that represents the top of the line powered speakers for home or studio use.",
-    price: "3,500",
+    price: "3500",
     firstFeature:
       "Reap the advantages of a flat diaphragm tweeter cone. This provides a fast response rate and excellent high frequencies that lower tiered bookshelf speakers cannot provide. The woofers are made from aluminum that produces a unique and clear sound. XLR inputs allow you to connect to a mixer for more advanced usage.",
     secondFeature:

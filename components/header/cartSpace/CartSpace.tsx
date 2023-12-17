@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   CartContainer,
   CartDiv,
@@ -16,7 +16,6 @@ import {
 import CartProduct from "./CartProduct/CartProduct";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { cartData } from "@/app/states";
-import { totalPrice } from "@/app/states";
 
 type Props = {
   cartSpace: boolean;
@@ -28,12 +27,24 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
     setCartSpace(!cartSpace);
   };
 
-  const [cart, setCart] = useRecoilState(cartData);
-  const cartDataRemover = () => {
-    setCart([]);
+  const cart = useRecoilValue(cartData);
+  const cartModel = [...cart];
+  const [oneCart, setOneCart] = useRecoilState(cartData);
+
+  const [total, setTotal] = useState(0);
+
+  const removeCart = () => {
+    setOneCart([]);
   };
 
-  const [total, setTotal] = useRecoilState(totalPrice);
+  useEffect(() => {
+    const haha = cartModel.reduce(
+      (sum, product) => Number(product.price) + sum,
+      0
+    );
+    setTotal(haha);
+    console.log(cartModel);
+  }, [cart]);
 
   return (
     <>
@@ -41,7 +52,7 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
       <CartDiv>
         <TitleAndRemove>
           <CartTitle>Cart ({cart.length})</CartTitle>
-          <Remove onClick={cartDataRemover}>Remove all</Remove>
+          <Remove onClick={removeCart}>Remove all</Remove>
         </TitleAndRemove>
 
         {cart.map((product) => (

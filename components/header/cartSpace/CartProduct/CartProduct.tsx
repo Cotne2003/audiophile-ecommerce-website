@@ -11,7 +11,6 @@ import {
   CounterIconDiv,
   Count,
 } from "./CartProductStyles";
-import test from "@/public/assets/product-xx59-headphones/desktop/image-category-page-preview.jpg";
 import plus from "@/public/assets/plus.svg";
 import minus from "@/public/assets/minus.svg";
 

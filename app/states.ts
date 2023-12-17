@@ -11,8 +11,3 @@ export const cartData = atom({
   key: "cart",
   default: [] as Product[],
 });
-
-export const totalPrice = atom({
-  key: "total",
-  default: 0 as number,
-});

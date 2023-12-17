@@ -19,7 +19,7 @@ import plus from "@/public/assets/plus.svg";
 import minus from "@/public/assets/minus.svg";
 import { DATA, ProductType } from "@/DATA";
 import { useRouter, usePathname } from "next/navigation";
-import { Product, cartData, totalPrice } from "@/app/states";
+import { Product, cartData } from "@/app/states";
 import { useRecoilState } from "recoil";
 import { v4 } from "uuid";
 
@@ -38,7 +38,6 @@ const SectionOne = () => {
   }, []);
 
   const [cart, setCart] = useRecoilState<Product[]>(cartData);
-  const [total, setTotal] = useRecoilState(totalPrice);
 
   const addedProduct = () => {
     setCart([
@@ -50,9 +49,7 @@ const SectionOne = () => {
         price: data?.price ?? "0",
       },
     ]);
-    const haha = cart.reduce((sum, product) => +product.price + sum, 0);
   };
-  console.log(typeof [1, 2]);
   return (
     <section>
       <GoBack onClick={goBack}>Go Back</GoBack>
