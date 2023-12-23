@@ -43,7 +43,6 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
       0
     );
     setTotal(haha);
-    console.log(cartModel);
   }, [cart]);
 
   return (
