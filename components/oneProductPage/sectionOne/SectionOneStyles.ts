@@ -118,6 +118,7 @@ export const ProductCounter = styled.div`
   background: #f1f1f1;
   height: 4.5rem;
   gap: 2rem;
+  width: 110px;
 `;
 
 export const Count = styled.p`

@@ -18,9 +18,10 @@ type Props = {
   imgUrl: string | undefined;
   title: string | undefined;
   price: string | undefined;
+  quantity: number;
 };
 
-const CartProduct = ({ imgUrl, title, price }: Props) => {
+const CartProduct = ({ imgUrl, title, price, quantity }: Props) => {
   return (
     <ProductsDiv>
       <ProductDiv>
@@ -35,7 +36,7 @@ const CartProduct = ({ imgUrl, title, price }: Props) => {
           <CounterIconDiv>
             <img src={minus.src} />
           </CounterIconDiv>
-          <Count>1</Count>
+          <Count>{quantity}</Count>
           <CounterIconDiv>
             <img src={plus.src} />
           </CounterIconDiv>

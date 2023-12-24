@@ -29,7 +29,7 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
 
   const cart = useRecoilValue(cartData);
   const cartModel = [...cart];
-  const [oneCart, setOneCart] = useRecoilState(cartData);
+  const [, setOneCart] = useRecoilState(cartData);
 
   const [total, setTotal] = useState(0);
 
@@ -38,11 +38,11 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
   };
 
   useEffect(() => {
-    const haha = cartModel.reduce(
-      (sum, product) => Number(product.price) + sum,
+    const sumOfProducts = cartModel.reduce(
+      (sum, product) => Number(product.price) * product.count + sum,
       0
     );
-    setTotal(haha);
+    setTotal(sumOfProducts);
   }, [cart]);
 
   return (
@@ -60,6 +60,7 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
             imgUrl={product.imgUrl}
             title={product.title}
             price={product.price}
+            quantity={product.count}
           />
         ))}
 

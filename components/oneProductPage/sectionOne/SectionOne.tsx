@@ -47,9 +47,23 @@ const SectionOne = () => {
         imgUrl: data?.mainImgDesktopUrl ?? "nothing",
         title: data?.title ?? "nothing",
         price: data?.price ?? "0",
+        count: count,
       },
     ]);
   };
+
+  // Set Count //////////////////////////////////////////
+  const [count, setCount] = useState(1);
+
+  const countPlus = () => {
+    if (count == 9) return;
+    setCount(count + 1);
+  };
+  const countMinus = () => {
+    if (count == 1) return;
+    setCount(count - 1);
+  };
+
   return (
     <section>
       <GoBack onClick={goBack}>Go Back</GoBack>
@@ -63,11 +77,11 @@ const SectionOne = () => {
           <ProductPrice>{"$ " + data?.price}</ProductPrice>
           <ToCartDiv>
             <ProductCounter>
-              <CounterIconDiv>
+              <CounterIconDiv onClick={countMinus}>
                 <img src={minus.src} />
               </CounterIconDiv>
-              <Count>1</Count>
-              <CounterIconDiv>
+              <Count>{count}</Count>
+              <CounterIconDiv onClick={countPlus}>
                 <img src={plus.src} />
               </CounterIconDiv>
             </ProductCounter>

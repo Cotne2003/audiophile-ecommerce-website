@@ -5,6 +5,7 @@ export type Product = {
   imgUrl: string;
   title: string;
   price: string;
+  count: number;
 };
 
 export const cartData = atom({
