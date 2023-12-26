@@ -12,7 +12,7 @@ import { SecondTitle } from "@/components/texts/Titles";
 
 const InputsAndPayment = () => {
   return (
-    <CheckoutContainer style={{ width: "60%" }}>
+    <CheckoutContainer>
       <SecondTitle>CHECKOUT</SecondTitle>
       <form>
         <div>
@@ -22,15 +22,27 @@ const InputsAndPayment = () => {
           <InputsContainer>
             <div>
               <InputTitle>Name</InputTitle>
-              <StyledInput type="text" placeholder="Cotne Basiashvili" />
+              <StyledInput
+                type="text"
+                placeholder="Cotne Basiashvili"
+                name="name"
+              />
             </div>
             <div>
               <InputTitle>Email Address</InputTitle>
-              <StyledInput type="email" placeholder="basiashvilic@gmail.com" />
+              <StyledInput
+                type="email"
+                placeholder="basiashvilic@gmail.com"
+                name="email"
+              />
             </div>
             <div>
               <InputTitle>Phone Number</InputTitle>
-              <StyledInput type="number" placeholder="+1 202-555-0136" />
+              <StyledInput
+                type="number"
+                placeholder="+1 202-555-0136"
+                name="phone"
+              />
             </div>
           </InputsContainer>
         </div>
@@ -41,21 +53,25 @@ const InputsAndPayment = () => {
           </OrangeTxtWrapper>
           <div>
             <InputTitle>Address</InputTitle>
-            <StyledInput type="text" placeholder="1137 Williams Avenue" />
+            <StyledInput
+              type="text"
+              placeholder="1137 Williams Avenue"
+              name="addres"
+            />
           </div>
           <InputsContainerWrapper>
             <InputsContainer>
               <div>
                 <InputTitle>ZIP Code</InputTitle>
-                <StyledInput type="number" placeholder="10001" />
+                <StyledInput type="number" placeholder="10001" name="zip" />
               </div>
               <div>
                 <InputTitle>City</InputTitle>
-                <StyledInput type="text" placeholder="Tbilisi" />
+                <StyledInput type="text" placeholder="Tbilisi" name="city" />
               </div>
               <div>
                 <InputTitle>Country</InputTitle>
-                <StyledInput type="text" placeholder="Georgia" />
+                <StyledInput type="text" placeholder="Georgia" name="country" />
               </div>
             </InputsContainer>
           </InputsContainerWrapper>
@@ -68,11 +84,15 @@ const InputsAndPayment = () => {
           <InputsContainer>
             <div>
               <InputTitle>e-Money Number</InputTitle>
-              <StyledInput type="number" placeholder="238521993" />
+              <StyledInput
+                type="number"
+                placeholder="238521993"
+                name="e-money"
+              />
             </div>
             <div>
               <InputTitle>e-Money PIN</InputTitle>
-              <StyledInput type="number" placeholder="6891" />
+              <StyledInput type="number" placeholder="6891" name="e-money" />
             </div>
           </InputsContainer>
         </div>

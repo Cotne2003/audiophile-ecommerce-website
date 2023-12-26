@@ -1,11 +1,14 @@
 import styled from "styled-components";
 
 export const CheckoutContainer = styled.div`
+  width: 70%;
   background-color: #fff;
   padding: 5.4rem 4.8rem 4.8rem;
   border-radius: 8px;
-  margin-top: 3.8rem;
   justify-content: space-between;
+  @media (max-width: 1439px) {
+    width: 100%;
+  }
 `;
 
 export const OrangeTxt = styled.p`
@@ -28,6 +31,9 @@ export const InputsContainer = styled.div`
   width: 100%;
   column-gap: 1.6rem;
   row-gap: 2.4rem;
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 export const InputsContainerWrapper = styled.div`
