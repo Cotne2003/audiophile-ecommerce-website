@@ -27,7 +27,8 @@ const MobileMenu: React.FC<Props> = ({ menu, setMenu }) => {
   };
 
   return (
-    <MobileMenuContainer>
+    <>
+      <MobileMenuContainer onClick={menuHandler}></MobileMenuContainer>
       <MobileMenuDiv>
         <ProductsShopContainer>
           <ProductShopContainer>
@@ -59,7 +60,7 @@ const MobileMenu: React.FC<Props> = ({ menu, setMenu }) => {
           </ProductShopContainer>
         </ProductsShopContainer>
       </MobileMenuDiv>
-    </MobileMenuContainer>
+    </>
   );
 };
 

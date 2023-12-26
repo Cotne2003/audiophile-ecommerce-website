@@ -96,3 +96,11 @@ export const ChekCoutBtn = styled.button`
     background-color: #fbaf85;
   }
 `;
+
+export const ProductsContainer = styled.div`
+  overflow-y: scroll;
+  max-height: 32rem;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+`;

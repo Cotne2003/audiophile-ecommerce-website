@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const MobileMenuContainer = styled.div`
-  height: 100%;
+  height: 100vh;
   width: 100%;
   position: fixed;
-  top: 9rem;
+  top: 0;
   left: 0;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.425);
@@ -19,6 +19,12 @@ export const MobileMenuDiv = styled.div`
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   width: 100%;
-  z-index: 3;
+  position: absolute;
+  top: 9rem;
+  left: 0;
+  z-index: 999;
   background-color: #fff;
+  @media (min-width: 1024px) {
+    display: none;
+  }
 `;

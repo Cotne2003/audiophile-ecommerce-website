@@ -7,6 +7,7 @@ import {
   CartTitle,
   ChekCoutBtn,
   FullPrice,
+  ProductsContainer,
   Remove,
   TitleAndRemove,
   Total,
@@ -16,6 +17,7 @@ import {
 import CartProduct from "./CartProduct/CartProduct";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { cartData } from "@/app/states";
+import Link from "next/link";
 
 type Props = {
   cartSpace: boolean;
@@ -28,9 +30,7 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
   };
 
   const cart = useRecoilValue(cartData);
-  const cartModel = [...cart];
   const [, setOneCart] = useRecoilState(cartData);
-
   const [total, setTotal] = useState(0);
 
   const removeCart = () => {
@@ -38,6 +38,7 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
   };
 
   useEffect(() => {
+    const cartModel = [...cart];
     const sumOfProducts = cartModel.reduce(
       (sum, product) => Number(product.price) * product.count + sum,
       0
@@ -53,23 +54,26 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
           <CartTitle>Cart ({cart.length})</CartTitle>
           <Remove onClick={removeCart}>Remove all</Remove>
         </TitleAndRemove>
-
-        {cart.map((product) => (
-          <CartProduct
-            key={product.id}
-            imgUrl={product.imgUrl}
-            title={product.title}
-            price={product.price}
-            quantity={product.count}
-          />
-        ))}
+        <ProductsContainer>
+          {cart.map((product) => (
+            <CartProduct
+              key={product.id}
+              imgUrl={product.imgUrl}
+              title={product.title}
+              price={product.price}
+              quantity={product.count}
+            />
+          ))}
+        </ProductsContainer>
 
         <TotalAndButtonContainer>
           <TotalAndFullPriceDiv>
             <Total>Total</Total>
             <FullPrice>$ {total}</FullPrice>
           </TotalAndFullPriceDiv>
-          <ChekCoutBtn>checkout</ChekCoutBtn>
+          <Link href={"/checkout"}>
+            <ChekCoutBtn>checkout</ChekCoutBtn>
+          </Link>
         </TotalAndButtonContainer>
       </CartDiv>
     </>

@@ -8,6 +8,10 @@ export const GoBack = styled.p`
   line-height: 25px;
   opacity: 0.5;
   cursor: pointer;
+  &:hover {
+    color: #d87d4a;
+    opacity: 1;
+  }
 `;
 
 export const ShopingAreaContainer = styled.div`

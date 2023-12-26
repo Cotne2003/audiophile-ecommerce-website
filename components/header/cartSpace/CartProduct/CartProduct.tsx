@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   ProductsDiv,
   ProductDiv,
@@ -8,11 +8,8 @@ import {
   ProductTitle,
   Price,
   ProductCounter,
-  CounterIconDiv,
   Count,
 } from "./CartProductStyles";
-import plus from "@/public/assets/plus.svg";
-import minus from "@/public/assets/minus.svg";
 
 type Props = {
   imgUrl: string | undefined;
@@ -33,13 +30,7 @@ const CartProduct = ({ imgUrl, title, price, quantity }: Props) => {
           </TitleAndPriceDiv>
         </ImgAndPrice>
         <ProductCounter>
-          <CounterIconDiv>
-            <img src={minus.src} />
-          </CounterIconDiv>
           <Count>{quantity}</Count>
-          <CounterIconDiv>
-            <img src={plus.src} />
-          </CounterIconDiv>
         </ProductCounter>
       </ProductDiv>
     </ProductsDiv>

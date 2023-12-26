@@ -53,6 +53,7 @@ export const ProductCounter = styled.div`
   background: #f1f1f1;
   height: 4.5rem;
   gap: 1rem;
+  padding: 0 30px;
 `;
 
 export const Count = styled.p`
@@ -61,19 +62,4 @@ export const Count = styled.p`
   font-weight: 700;
   letter-spacing: 1px;
   text-transform: uppercase;
-`;
-
-export const CounterIconDiv = styled.div`
-  width: 3rem;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  &:hover {
-    img {
-      filter: brightness(0) saturate(100%) invert(45%) sepia(83%) saturate(384%)
-        hue-rotate(338deg) brightness(105%) contrast(84%);
-    }
-  }
 `;
