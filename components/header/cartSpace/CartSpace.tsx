@@ -5,7 +5,7 @@ import {
   CartContainer,
   CartDiv,
   CartTitle,
-  ChekCoutBtn,
+  CheckoutBtn,
   FullPrice,
   ProductsContainer,
   Remove,
@@ -72,7 +72,7 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
             <FullPrice>$ {total}</FullPrice>
           </TotalAndFullPriceDiv>
           <Link href={"/checkout"}>
-            <ChekCoutBtn>checkout</ChekCoutBtn>
+            <CheckoutBtn>checkout</CheckoutBtn>
           </Link>
         </TotalAndButtonContainer>
       </CartDiv>

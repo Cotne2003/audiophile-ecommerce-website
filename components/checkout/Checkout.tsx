@@ -6,10 +6,7 @@ import InputsAndPayment from "./inputsAndPayment/InputsAndPayment";
 import { Product, cartData } from "../../app/states";
 import { useRecoilValue } from "recoil";
 import CartProduct from "../header/cartSpace/CartProduct/CartProduct";
-import {
-  ChekCoutBtn,
-  ProductsContainer,
-} from "../header/cartSpace/CartSpaceStyles";
+import { ProductsContainer } from "../header/cartSpace/CartSpaceStyles";
 import {
   FlexContainer,
   ProductsWrapper,
@@ -66,7 +63,6 @@ const Checkout = () => {
               <p style={{ color: "#D87D4A" }}>$ {total + 50}</p>
             </li>
           </StyledUl>
-          <ChekCoutBtn>CONTINUE & PAY</ChekCoutBtn>
         </ProductsWrapper>
       </FlexContainer>
     </StyledMain>

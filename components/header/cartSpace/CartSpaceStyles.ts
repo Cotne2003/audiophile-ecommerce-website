@@ -80,7 +80,7 @@ export const FullPrice = styled.p`
   text-transform: uppercase;
 `;
 
-export const ChekCoutBtn = styled.button`
+export const CheckoutBtn = styled.button`
   width: 100%;
   background: #d87d4a;
   border: none;
