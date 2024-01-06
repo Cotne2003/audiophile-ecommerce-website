@@ -17,6 +17,7 @@ import {
 import { SeeProductButton } from "@/components/buttons/buttons";
 import { SecondTitle } from "@/components/texts/Titles";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const ProductsAndPhotos = () => {
   return (
@@ -30,7 +31,14 @@ const ProductsAndPhotos = () => {
             truly remarkable sound.
           </ProductText>
           <Link href={"/speakers/ZX9"}>
-            <SeeProductButton color="black">See Product</SeeProductButton>
+            <SeeProductButton
+              color="black"
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              See Product
+            </SeeProductButton>
           </Link>
         </ProductAndPhotoFirstDivSecond>
       </ProductAndPhotoFirstDiv>
@@ -39,7 +47,14 @@ const ProductsAndPhotos = () => {
         <div>
           <SecondTitle>ZX7 SPEAKER</SecondTitle>
           <Link href={"/speakers/ZX7"}>
-            <SeeProductButton fill="none">See Product</SeeProductButton>
+            <SeeProductButton
+              fill="none"
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              See Product
+            </SeeProductButton>
           </Link>
         </div>
       </ProductAndPhotoSecondDivContainer>
@@ -49,7 +64,14 @@ const ProductsAndPhotos = () => {
         <ProductAndPhotoThirdDivContainerSecondDiv>
           <SecondTitle>YX1 EARPHONES</SecondTitle>
           <Link href={"/earphones/YX1"}>
-            <SeeProductButton fill="none">See Product</SeeProductButton>
+            <SeeProductButton
+              fill="none"
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              See Product
+            </SeeProductButton>
           </Link>
         </ProductAndPhotoThirdDivContainerSecondDiv>
       </ProductAndPhotoThirdDivContainer>

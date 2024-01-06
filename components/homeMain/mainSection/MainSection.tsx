@@ -10,6 +10,7 @@ import {
 } from "./MainSectionStyles";
 import { SeeProductButton } from "../../buttons/buttons";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const MainSection = () => {
   return (
@@ -22,7 +23,13 @@ const MainSection = () => {
           for the passionate music enthusiast.
         </ProductText>
         <Link href={"/headphones/XX99-Mark-II"}>
-          <SeeProductButton>See Product</SeeProductButton>
+          <SeeProductButton
+            as={motion.button}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            See Product
+          </SeeProductButton>
         </Link>
       </DivProduct>
     </MainStyledSection>

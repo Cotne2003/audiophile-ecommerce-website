@@ -17,6 +17,7 @@ import ZX7 from "@/public/assets/product-zx7-speaker/desktop/image-category-page
 import ProductsShop from "@/components/productsShop/ProductsShop";
 import BestGear from "@/components/best audio gear/BestGear";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const SecondSection = () => {
   return (
@@ -33,7 +34,13 @@ const SecondSection = () => {
             setups.
           </ShopText>
           <Link href={"/speakers/ZX9"}>
-            <SeeProductButton>see product</SeeProductButton>
+            <SeeProductButton
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              see product
+            </SeeProductButton>
           </Link>
         </ShopDiv>
       </ShopContainer>
@@ -48,7 +55,13 @@ const SecondSection = () => {
             use.
           </ShopText>
           <Link href={"/speakers/ZX7"}>
-            <SeeProductButton>See Product</SeeProductButton>
+            <SeeProductButton
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              See Product
+            </SeeProductButton>
           </Link>
         </ShopDiv>
         <ShopImg src={ZX7.src} />

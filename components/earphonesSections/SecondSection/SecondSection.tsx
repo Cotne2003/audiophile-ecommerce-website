@@ -18,6 +18,7 @@ import YX1 from "@/public/assets/product-yx1-earphones/desktop/image-category-pa
 import ProductsShop from "@/components/productsShop/ProductsShop";
 import BestGear from "@/components/best audio gear/BestGear";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const SecondSection = () => {
   return (
@@ -34,7 +35,13 @@ const SecondSection = () => {
             feature.
           </ShopText>
           <Link href={"/earphones/YX1"}>
-            <SeeProductButton>see product</SeeProductButton>
+            <SeeProductButton
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              see product
+            </SeeProductButton>
           </Link>
         </ShopDiv>
       </ShopContainer>

@@ -18,6 +18,7 @@ import { SeeProductButton } from "@/components/buttons/buttons";
 import ProductsShop from "@/components/productsShop/ProductsShop";
 import BestGear from "@/components/best audio gear/BestGear";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const SecondSection = () => {
   return (
@@ -33,7 +34,13 @@ const SecondSection = () => {
             balanced depth and precision of studio-quality sound.
           </ShopText>
           <Link href={"/headphones/XX99-Mark-II"}>
-            <SeeProductButton>See Product</SeeProductButton>
+            <SeeProductButton
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              See Product
+            </SeeProductButton>
           </Link>
         </ShopDiv>
       </ShopContainer>
@@ -47,7 +54,13 @@ const SecondSection = () => {
             engineers, and music aficionados alike in studios and on the go.
           </ShopText>
           <Link href={"/headphones/XX99-Mark-I"}>
-            <SeeProductButton>See Product</SeeProductButton>
+            <SeeProductButton
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              See Product
+            </SeeProductButton>
           </Link>
         </ShopDiv>
         <ShopImg src={XX99I.src} />
@@ -63,7 +76,13 @@ const SecondSection = () => {
             wireless headset is a brilliant companion at home or on the move.
           </ShopText>
           <Link href={"/headphones/XX59"}>
-            <SeeProductButton>See Product</SeeProductButton>
+            <SeeProductButton
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              See Product
+            </SeeProductButton>
           </Link>
         </ShopDiv>
       </ShopContainer>

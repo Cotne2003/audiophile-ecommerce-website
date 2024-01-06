@@ -8,6 +8,7 @@ import Link from "next/link";
 import FBicon from "/public/assets/shared/desktop/icon-facebook.svg";
 import TWicon from "/public/assets/shared/desktop/icon-twitter.svg";
 import INSTicon from "/public/assets/shared/desktop/icon-instagram.svg";
+import { motion } from "framer-motion";
 
 const Footer = () => {
   return (
@@ -20,16 +21,40 @@ const Footer = () => {
 
         <div className={styles.Navbar}>
           <Link href={"/"}>
-            <NavText>HOME</NavText>
+            <NavText
+              as={motion.p}
+              whileHover={{ scale: 1.1, color: "#d87d4a" }}
+              whileTap={{ scale: 0.9 }}
+            >
+              HOME
+            </NavText>
           </Link>
           <Link href={"/headphones"}>
-            <NavText>HEADPHONES</NavText>
+            <NavText
+              as={motion.p}
+              whileHover={{ scale: 1.1, color: "#d87d4a" }}
+              whileTap={{ scale: 0.9 }}
+            >
+              HEADPHONES
+            </NavText>
           </Link>
           <Link href={"/speakers"}>
-            <NavText>SPEAKERS</NavText>
+            <NavText
+              as={motion.p}
+              whileHover={{ scale: 1.1, color: "#d87d4a" }}
+              whileTap={{ scale: 0.9 }}
+            >
+              SPEAKERS
+            </NavText>
           </Link>
           <Link href={"/earphones"}>
-            <NavText>EARPHONES</NavText>
+            <NavText
+              as={motion.p}
+              whileHover={{ scale: 1.1, color: "#d87d4a" }}
+              whileTap={{ scale: 0.9 }}
+            >
+              EARPHONES
+            </NavText>
           </Link>
         </div>
       </div>

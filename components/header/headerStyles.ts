@@ -43,6 +43,12 @@ export const Logo = styled.img<Props>`
   }
 `;
 
+export const MobilieLogoHidder = styled.div`
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
 export const MobileLogo = styled.img`
   width: 14.3rem;
   height: 2.5rem;
@@ -77,10 +83,6 @@ export const NavText = styled.p`
   line-height: 2.5rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  transition: ease 0.3s;
-  &:hover {
-    color: #d87d4a;
-  }
 `;
 
 export const Cart = styled.img`
