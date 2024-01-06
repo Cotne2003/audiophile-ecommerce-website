@@ -3,11 +3,12 @@ import styles from "./FinalCheckStyles.module.css";
 import { SecondTitle } from "@/components/texts/Titles";
 import { CheckoutBtn } from "@/components/header/cartSpace/CartSpaceStyles";
 import Link from "next/link";
-import { useRecoilValue } from "recoil";
+import { useRecoilState, useRecoilValue } from "recoil";
 import { Product, cartData } from "@/app/states";
 
 const FinalCheck = () => {
   const cart = useRecoilValue<Product[]>(cartData);
+  const [, removeCart] = useRecoilState(cartData);
   const [total, setTotal] = useState(0);
   useEffect(() => {
     const cartModel = [...cart];
@@ -17,6 +18,11 @@ const FinalCheck = () => {
     );
     setTotal(sumOfProducts);
   }, [cart]);
+
+  const cartHandler = () => {
+    setTimeout(() => removeCart([]), 1000);
+  };
+
   return (
     <div className={styles.finalContainer}>
       <div className={styles.finalCheckWrapper}>
@@ -64,7 +70,7 @@ const FinalCheck = () => {
           </div>
         </div>
         <Link href={"/"}>
-          <CheckoutBtn>BACK TO HOME</CheckoutBtn>
+          <CheckoutBtn onClick={cartHandler}>BACK TO HOME</CheckoutBtn>
         </Link>
       </div>
     </div>

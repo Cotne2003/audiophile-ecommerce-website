@@ -116,3 +116,21 @@
   font-weight: 700;
   text-transform: uppercase;
 }
+
+@media (max-width: 600px) {
+  .finalCheckWrapper {
+    width: 40rem;
+    padding: 1;
+  }
+  .itemsCont {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    height: 50%;
+  }
+  .firstItem,
+  .secondItem {
+    width: 100%;
+    height: 30%;
+  }
+}
