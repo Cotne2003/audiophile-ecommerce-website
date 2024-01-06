@@ -34,6 +34,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 150px;
 }
 
 .firstItem {
@@ -42,6 +43,7 @@
   background: #f1f1f1;
   padding: 2.4rem;
   width: 60%;
+  height: 100%;
 }
 .productInfo {
   display: flex;
@@ -52,6 +54,7 @@
 .imgPriceName {
   display: flex;
   gap: 16px;
+  padding-bottom: 5px;
 }
 
 .imgPriceName img {
@@ -95,6 +98,7 @@
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;
   gap: 10px;
+  height: 100%;
 }
 
 .secondItem p:nth-child(1) {

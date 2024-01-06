@@ -247,7 +247,7 @@ const InputsAndPayment = () => {
           </CheckoutBtn>
         </form>
       </CheckoutContainer>
-      <FinalCheck />
+      {finalCheck && <FinalCheck />}
     </>
   );
 };

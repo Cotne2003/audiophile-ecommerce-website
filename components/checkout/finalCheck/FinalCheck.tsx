@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "./FinalCheckStyles.module.css";
 import { SecondTitle } from "@/components/texts/Titles";
-import test from "@/public/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg";
 import { CheckoutBtn } from "@/components/header/cartSpace/CartSpaceStyles";
 import Link from "next/link";
 import { useRecoilValue } from "recoil";
@@ -49,9 +48,15 @@ const FinalCheck = () => {
                   <p>${cart[0].price}</p>
                 </div>
               </div>
-              <p>x1</p>
+              <p>x{cart[0].count}</p>
             </div>
-            <p className={styles.otherItems}>and 2 other items</p>
+            <p className={styles.otherItems}>
+              {cart.length === 1
+                ? ``
+                : cart.length === 2
+                ? `and 1 item`
+                : `and ${cart.length - 1} other items`}
+            </p>
           </div>
           <div className={styles.secondItem}>
             <p>grand total</p>

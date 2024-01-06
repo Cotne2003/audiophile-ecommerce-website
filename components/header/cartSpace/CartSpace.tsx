@@ -71,8 +71,8 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
             <Total>Total</Total>
             <FullPrice>$ {total}</FullPrice>
           </TotalAndFullPriceDiv>
-          <Link href={"/checkout"}>
-            <CheckoutBtn>checkout</CheckoutBtn>
+          <Link href={cart.length === 0 ? "" : "/checkout"}>
+            <CheckoutBtn onClick={cartSpaceRemover}>checkout</CheckoutBtn>
           </Link>
         </TotalAndButtonContainer>
       </CartDiv>
