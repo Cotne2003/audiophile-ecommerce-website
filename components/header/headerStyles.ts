@@ -89,4 +89,8 @@ export const Cart = styled.img`
   width: 2.3rem;
   height: 2rem;
   cursor: pointer;
+  &:hover {
+    filter: brightness(0) saturate(100%) invert(45%) sepia(83%) saturate(384%)
+      hue-rotate(338deg) brightness(105%) contrast(84%);
+  }
 `;

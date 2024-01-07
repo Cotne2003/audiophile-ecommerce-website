@@ -9,11 +9,18 @@ import {
   SecondDiv,
 } from "./BestGearStyles";
 import { SecondTitleBig } from "../texts/Titles";
+import { motion } from "framer-motion";
 
 const BestGear = () => {
   return (
     <Container>
-      <FirstDiv>
+      <FirstDiv
+        as={motion.div}
+        initial={{ x: -50, opacity: 0 }}
+        transition={{ duration: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+      >
         <SecondTitleBig>
           Bringing you the <SpanOfBest>best</SpanOfBest> audio gear
         </SecondTitleBig>
@@ -27,7 +34,13 @@ const BestGear = () => {
         </PrimaryText>
       </FirstDiv>
 
-      <SecondDiv></SecondDiv>
+      <SecondDiv
+        as={motion.div}
+        initial={{ x: 50, opacity: 0 }}
+        transition={{ duration: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+      ></SecondDiv>
     </Container>
   );
 };

@@ -14,10 +14,17 @@ import headphonesPreview from "./../../public/assets/shared/desktop/image-catego
 import speakersPreview from "./../../public/assets/shared/desktop/image-category-thumbnail-speakers.png";
 import earPhonesPreview from "./../../public/assets/shared/desktop/image-category-thumbnail-earphones.png";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const ProductsShop = () => {
   return (
-    <ProductsShopContainer>
+    <ProductsShopContainer
+      as={motion.div}
+      initial={{ x: -50, opacity: 0 }}
+      transition={{ duration: 1 }}
+      whileInView={{ x: 0, opacity: 1 }}
+      viewport={{ once: true }}
+    >
       <ProductShopContainer>
         <Link href={"/headphones"}>
           <ProductShopImg src={headphonesPreview.src} />

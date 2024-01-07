@@ -6,11 +6,11 @@ import {
   Logo,
   LogoAndMenuContainer,
   Navbar,
-  Cart,
   NavText,
   MenuIcon,
   MobileLogo,
   MobilieLogoHidder,
+  Cart,
 } from "./headerStyles";
 import logo from "./../../public/assets/audiophile2.svg";
 import menuIcon from "./../../public/assets/menu-icon.svg";
@@ -87,6 +87,14 @@ const Header = () => {
         as={motion.img}
         whileHover={{ scale: 1.2 }}
         whileTap={{ scale: 0.8 }}
+        style={
+          cartSpace
+            ? {
+                filter:
+                  "brightness(0) saturate(100%) invert(45%) sepia(83%) saturate(384%) hue-rotate(338deg) brightness(105%) contrast(84%)",
+              }
+            : {}
+        }
       />
       {menu && <MobileMenu menu={menu} setMenu={setMenu} />}
       {cartSpace && (

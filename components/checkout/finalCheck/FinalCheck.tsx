@@ -5,6 +5,7 @@ import { CheckoutBtn } from "@/components/header/cartSpace/CartSpaceStyles";
 import Link from "next/link";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { Product, cartData } from "@/app/states";
+import { motion } from "framer-motion";
 
 const FinalCheck = () => {
   const cart = useRecoilValue<Product[]>(cartData);
@@ -70,7 +71,14 @@ const FinalCheck = () => {
           </div>
         </div>
         <Link href={"/"}>
-          <CheckoutBtn onClick={cartHandler}>BACK TO HOME</CheckoutBtn>
+          <CheckoutBtn
+            onClick={cartHandler}
+            as={motion.button}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+          >
+            BACK TO HOME
+          </CheckoutBtn>
         </Link>
       </div>
     </div>

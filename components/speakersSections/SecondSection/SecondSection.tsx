@@ -23,8 +23,21 @@ const SecondSection = () => {
   return (
     <StyledSection>
       <ShopContainer>
-        <ShopImg src={ZX9.src} />
-        <ShopDiv>
+        <ShopImg
+          src={ZX9.src}
+          as={motion.img}
+          initial={{ x: -50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        />
+        <ShopDiv
+          as={motion.div}
+          initial={{ x: 50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <ShopNewProduct>NEW PRODUCT</ShopNewProduct>
           <ShopTitle>ZX9 SPEAKER</ShopTitle>
           <ShopText>
@@ -46,7 +59,13 @@ const SecondSection = () => {
       </ShopContainer>
 
       <ShopContainer height="enable" direction="reverse">
-        <ShopDiv>
+        <ShopDiv
+          as={motion.div}
+          initial={{ x: -50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <ShopTitle>ZX7 SPEAKER</ShopTitle>
           <ShopText>
             Stream high quality sound wirelessly with minimal loss. The ZX7
@@ -64,7 +83,14 @@ const SecondSection = () => {
             </SeeProductButton>
           </Link>
         </ShopDiv>
-        <ShopImg src={ZX7.src} />
+        <ShopImg
+          src={ZX7.src}
+          as={motion.img}
+          initial={{ x: 50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        />
       </ShopContainer>
 
       <ProductsShopContainer>

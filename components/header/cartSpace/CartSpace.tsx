@@ -18,6 +18,7 @@ import CartProduct from "./CartProduct/CartProduct";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { cartData } from "@/app/states";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 type Props = {
   cartSpace: boolean;
@@ -72,7 +73,14 @@ const Cart = ({ cartSpace, setCartSpace }: Props) => {
             <FullPrice>$ {total}</FullPrice>
           </TotalAndFullPriceDiv>
           <Link href={cart.length === 0 ? "" : "/checkout"}>
-            <CheckoutBtn onClick={cartSpaceRemover}>checkout</CheckoutBtn>
+            <CheckoutBtn
+              onClick={cartSpaceRemover}
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              checkout
+            </CheckoutBtn>
           </Link>
         </TotalAndButtonContainer>
       </CartDiv>

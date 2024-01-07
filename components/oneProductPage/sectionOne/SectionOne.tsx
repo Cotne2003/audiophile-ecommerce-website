@@ -22,6 +22,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { Product, cartData } from "@/app/states";
 import { useRecoilState } from "recoil";
 import { v4 } from "uuid";
+import { motion } from "framer-motion";
 
 const SectionOne = () => {
   const router = useRouter();
@@ -68,10 +69,37 @@ const SectionOne = () => {
     <section>
       <GoBack onClick={goBack}>Go Back</GoBack>
       <ShopingAreaContainer>
-        <ProductImg src={data?.mainImgDesktopUrl} />
-        <ProductImgTablet src={data?.mainImgTabletUrl} />
-        <ProductImgMobile src={data?.mainImgMobileUrl} />
-        <ShopingAreaDiv>
+        <ProductImg
+          src={data?.mainImgDesktopUrl}
+          as={motion.img}
+          initial={{ x: -50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        />
+        <ProductImgTablet
+          src={data?.mainImgTabletUrl}
+          as={motion.img}
+          initial={{ x: -50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        />
+        <ProductImgMobile
+          src={data?.mainImgMobileUrl}
+          as={motion.img}
+          initial={{ x: -50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        />
+        <ShopingAreaDiv
+          as={motion.div}
+          initial={{ x: 50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <ProductTitle>{data?.title}</ProductTitle>
           <ProductText>{data?.mainText}</ProductText>
           <ProductPrice>{"$ " + data?.price}</ProductPrice>
@@ -85,7 +113,14 @@ const SectionOne = () => {
                 <img src={plus.src} />
               </CounterIconDiv>
             </ProductCounter>
-            <AddToCart onClick={addedProduct}>ADD TO CART</AddToCart>
+            <AddToCart
+              onClick={addedProduct}
+              as={motion.button}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+            >
+              ADD TO CART
+            </AddToCart>
           </ToCartDiv>
         </ShopingAreaDiv>
       </ShopingAreaContainer>

@@ -24,8 +24,21 @@ const SecondSection = () => {
   return (
     <StyledSection>
       <ShopContainer>
-        <ShopImg src={YX1.src} />
-        <ShopDiv>
+        <ShopImg
+          src={YX1.src}
+          as={motion.img}
+          initial={{ x: -50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        />
+        <ShopDiv
+          as={motion.div}
+          initial={{ x: 50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <ShopNewProduct>NEW PRODUCT</ShopNewProduct>
           <ShopTitle>YX1 WIRELESS EARPHONES</ShopTitle>
           <ShopText>

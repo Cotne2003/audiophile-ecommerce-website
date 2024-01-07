@@ -18,12 +18,12 @@ import {
   StyledSection,
 } from "./SectionTwoStyles";
 import { AddToCart } from "../sectionOne/SectionOneStyles";
-import XX99markI from "@/public/assets/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg";
 import ProductsShop from "@/components/productsShop/ProductsShop";
 import BestGear from "@/components/best audio gear/BestGear";
 import { DATA, ProductType } from "@/DATA";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const SectionTwo = () => {
   const pathName = usePathname();
@@ -35,12 +35,24 @@ const SectionTwo = () => {
   return (
     <StyledSection>
       <ContentContainer>
-        <ContentFirstDiv>
+        <ContentFirstDiv
+          as={motion.div}
+          initial={{ x: -50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <ContentTitle>FEATURES</ContentTitle>
           <ContentFirstText>{data?.firstFeature}</ContentFirstText>
           <ContentFirstText>{data?.secondFeature}</ContentFirstText>
         </ContentFirstDiv>
-        <ContentSecondDiv>
+        <ContentSecondDiv
+          as={motion.div}
+          initial={{ x: 50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <ContentTitle>in the box</ContentTitle>
           <ul>
             <li>
@@ -67,7 +79,13 @@ const SectionTwo = () => {
         </ContentSecondDiv>
       </ContentContainer>
 
-      <ProductImgContainer>
+      <ProductImgContainer
+        as={motion.div}
+        initial={{ x: -50, opacity: 0 }}
+        transition={{ duration: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+      >
         <div>
           <ProductImgDesktop src={data?.imgGallery1DesktopUrl} alt="" />
           <ProductImgDesktop src={data?.imgGallery2DesktopUrl} alt="" />
@@ -81,28 +99,52 @@ const SectionTwo = () => {
         <SecondProductImgMobile src={data?.imgGallery3MobileUrl} alt="" />
       </ProductImgContainer>
 
-      <AlsoLikeContainer>
+      <AlsoLikeContainer
+        as={motion.div}
+        initial={{ x: -50, opacity: 0 }}
+        transition={{ duration: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+      >
         <ContentTitle>you may also like</ContentTitle>
         <AlsoLikeDiv>
           <div>
             <img src={data?.alsoLikeImgUrl1} alt="" />
             <h2>{data?.alsoLikeTitle1}</h2>
             <Link href={data?.alsoLikeLink1 || ""}>
-              <AddToCart>See Product</AddToCart>
+              <AddToCart
+                as={motion.button}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                See Product
+              </AddToCart>
             </Link>
           </div>
           <div>
             <img src={data?.alsoLikeImgUrl2} alt="" />
             <h2>{data?.alsoLikeTitle2}</h2>
             <Link href={data?.alsoLikeLink2 || ""}>
-              <AddToCart>See Product</AddToCart>
+              <AddToCart
+                as={motion.button}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                See Product
+              </AddToCart>
             </Link>
           </div>
           <div>
             <img src={data?.alsoLikeImgUrl3} alt="" />
             <h2>{data?.alsoLikeTitle3}</h2>
             <Link href={data?.alsoLikeLink3 || ""}>
-              <AddToCart>See Product</AddToCart>
+              <AddToCart
+                as={motion.button}
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                See Product
+              </AddToCart>
             </Link>
           </div>
         </AlsoLikeDiv>

@@ -15,7 +15,13 @@ import { motion } from "framer-motion";
 const MainSection = () => {
   return (
     <MainStyledSection>
-      <DivProduct>
+      <DivProduct
+        as={motion.div}
+        initial={{ x: -50, opacity: 0 }}
+        transition={{ duration: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+      >
         <NewProduct>NEW PRODUCT</NewProduct>
         <MainHeadphone>XX99 Mark II HeadphoneS</MainHeadphone>
         <ProductText>

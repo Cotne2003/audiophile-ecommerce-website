@@ -22,7 +22,13 @@ import { motion } from "framer-motion";
 const ProductsAndPhotos = () => {
   return (
     <ProductsAndPhotosContainer>
-      <ProductAndPhotoFirstDiv>
+      <ProductAndPhotoFirstDiv
+        as={motion.div}
+        initial={{ x: -50, opacity: 0 }}
+        transition={{ duration: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+      >
         <ZX9img src={ZX9.src} />
         <ProductAndPhotoFirstDivSecond>
           <MainHeadphone size="small">ZX9 SPEAKER</MainHeadphone>
@@ -43,7 +49,13 @@ const ProductsAndPhotos = () => {
         </ProductAndPhotoFirstDivSecond>
       </ProductAndPhotoFirstDiv>
 
-      <ProductAndPhotoSecondDivContainer>
+      <ProductAndPhotoSecondDivContainer
+        as={motion.div}
+        initial={{ x: -50, opacity: 0 }}
+        transition={{ duration: 1 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        viewport={{ once: true }}
+      >
         <div>
           <SecondTitle>ZX7 SPEAKER</SecondTitle>
           <Link href={"/speakers/ZX7"}>
@@ -60,8 +72,20 @@ const ProductsAndPhotos = () => {
       </ProductAndPhotoSecondDivContainer>
 
       <ProductAndPhotoThirdDivContainer>
-        <ProductAndPhotoThirdDivContainerFirstDiv></ProductAndPhotoThirdDivContainerFirstDiv>
-        <ProductAndPhotoThirdDivContainerSecondDiv>
+        <ProductAndPhotoThirdDivContainerFirstDiv
+          as={motion.div}
+          initial={{ x: -50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        ></ProductAndPhotoThirdDivContainerFirstDiv>
+        <ProductAndPhotoThirdDivContainerSecondDiv
+          as={motion.div}
+          initial={{ x: 50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <SecondTitle>YX1 EARPHONES</SecondTitle>
           <Link href={"/earphones/YX1"}>
             <SeeProductButton

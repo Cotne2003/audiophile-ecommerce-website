@@ -24,8 +24,21 @@ const SecondSection = () => {
   return (
     <StyledSection>
       <ShopContainer>
-        <ShopImg src={XX99II.src} />
-        <ShopDiv>
+        <ShopImg
+          src={XX99II.src}
+          as={motion.img}
+          initial={{ x: -50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        />
+        <ShopDiv
+          as={motion.div}
+          initial={{ x: 50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <ShopNewProduct>NEW PRODUCT</ShopNewProduct>
           <ShopTitle>XX99 Mark II Headphones</ShopTitle>
           <ShopText>
@@ -46,7 +59,13 @@ const SecondSection = () => {
       </ShopContainer>
 
       <ShopContainer height="enable" direction="reverse">
-        <ShopDiv>
+        <ShopDiv
+          as={motion.div}
+          initial={{ x: -50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <ShopTitle>XX99 Mark I Headphones</ShopTitle>
           <ShopText>
             As the gold standard for headphones, the classic XX99 Mark I offers
@@ -63,12 +82,32 @@ const SecondSection = () => {
             </SeeProductButton>
           </Link>
         </ShopDiv>
-        <ShopImg src={XX99I.src} />
+        <ShopImg
+          src={XX99I.src}
+          as={motion.img}
+          initial={{ x: 50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        />
       </ShopContainer>
 
       <ShopContainer height="enable">
-        <ShopImg src={XX59.src} />
-        <ShopDiv>
+        <ShopImg
+          src={XX59.src}
+          as={motion.img}
+          initial={{ x: -50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        />
+        <ShopDiv
+          as={motion.div}
+          initial={{ x: 50, opacity: 0 }}
+          transition={{ duration: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+        >
           <ShopTitle>XX59 Headphones</ShopTitle>
           <ShopText>
             Enjoy your audio almost anywhere and customize it to your specific
