@@ -3,6 +3,8 @@
 import { ReactNode } from "react";
 import { RecoilRoot } from "recoil";
 
-export default (props: { children: ReactNode }) => {
+const RecoilWrapp = (props: { children: ReactNode }) => {
   return <RecoilRoot>{props.children}</RecoilRoot>;
 };
+
+export default RecoilWrapp;

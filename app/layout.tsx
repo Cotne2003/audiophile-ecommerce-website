@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "../components/header/Header";
 import Footer from "../components/footer/Footer";
-import RecoilWrapper from "@/components/RecoilWrapper/RecoilWrapper";
+import RecoilWrapp from "@/components/RecoilWrapper/RecoilWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,11 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <RecoilWrapper>
+        <RecoilWrapp>
           <Header />
           {children}
           <Footer />
-        </RecoilWrapper>
+        </RecoilWrapp>
       </body>
     </html>
   );
