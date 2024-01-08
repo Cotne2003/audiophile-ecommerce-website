@@ -61,10 +61,10 @@ const Footer = () => {
 
       <div className={styles.TextAndIcons}>
         <p className={styles.Text}>
-          Audiophile is an all in one stop to fulfill your audio needs. We're a
+          Audiophile is an all in one stop to fulfill your audio needs. We are a
           small team of music lovers and sound specialists who are devoted to
           helping you get the most out of personal audio. Come and visit our
-          demo facility - were open 7 days a week.
+          demo facility - we are open 7 days a week.
         </p>
         <div className={styles.icons}>
           <img src={FBicon.src} alt="FBicon" className={styles.icon} />
