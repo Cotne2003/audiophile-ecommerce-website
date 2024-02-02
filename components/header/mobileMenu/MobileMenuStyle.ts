@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const MobileMenuContainer = styled.div`
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   position: fixed;
   top: 0;
